@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:context="com.example.sabuh.worldcountries.CountryActivity"
+    >
+
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="-50dp"
+        android:scaleType="fitStart"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@null"
+        android:id="@+id/bayraq_img"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/denmark_256"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/olke_adi"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/bayraq_img"
+
+        android:text="@string/olke_adi"
+        />
+
+
+
+    <TextView
+        android:text="@string/paytaxt_adi"
+        android:paddingTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/olke_adi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/paytaxtAdi"
+        />
+    <TextView
+        android:text="@string/paytaxt"
+        android:paddingTop="10dp"
+        android:layout_below="@id/olke_adi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/paytaxt"
+        />
+    <TextView
+        android:text="@string/ehali"
+        android:paddingTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paytaxt"
+        android:id="@+id/ehali"/>
+
+    <TextView
+        android:text="@string/ehali_sayi"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paytaxtAdi"
+        android:layout_alignParentRight="true"
+        android:id="@+id/ehali_sayi"
+        />
+    <TextView
+        android:text="Ərazi"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/erazi"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/ehali"
+        />
+    <TextView
+        android:text="Erazi_olcu"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/erazi_olcu"
+        android:layout_below="@id/ehali_sayi"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:text="Danışılan dillər"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dil"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/erazi"
+        />
+    <TextView
+        android:text="diller"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/diller"
+        android:layout_below="@id/erazi_olcu"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:text="Valyuta"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/valyuta"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/dil"
+        />
+    <TextView
+        android:text="valyutalar"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/valyutalar"
+        android:layout_below="@id/diller"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:text="ÜDM"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/udm"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/valyuta"
+        />
+    <TextView
+        android:text="udm_deyer"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/udm_deyer"
+        android:layout_below="@id/valyutalar"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:text="Telefon kodu"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/telkodu"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/udm"
+        />
+    <TextView
+        android:text="kodlar"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/kodlar"
+        android:layout_below="@id/udm_deyer"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:text="Qitə"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/qite"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/telkodu"
+        />
+    <TextView
+        android:text="qiteler"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/qiteler"
+        android:layout_below="@id/kodlar"
+        android:layout_alignParentRight="true"/>
+
+
+
+
+
+</RelativeLayout>
+

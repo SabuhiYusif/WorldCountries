@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Countries</string>
+    <string name="title_olke_activity">OlkeActivity</string>
+    <string name="olke">Ölkə</string>
+    <string name="olke_adi">OlkeAdi</string>
+    <string name="action_settings">Haqqında</string>
+
+    <string name="olke_title">Dünya ölkələri</string>
+    <string name="paytaxt">Paytaxt</string>
+    <string name="paytaxt_adi">Paytaxt Adi</string>
+    <string name="ehali">Əhali</string>
+    <string name="ehali_sayi">ehali_sayi</string>
+    <string name="olke_adi_list">Olke adi</string>
+    <string name="search_action">Search</string>
+    <string name="search_hint">Axtar..</string>
+    <string name="title_activity_search">SearchActivity</string>
+</resources>
