@@ -27,9 +27,11 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.SectionIndexer;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import project.sabuhi.com.countries.R;
 
@@ -38,218 +40,6 @@ import project.sabuhi.com.countries.R;
  */
 
 public class CountryListFragment extends AppCompatActivity {
-
-//    private static final String TAG= "CountryListFragment";
-//    private ArrayList<Countries> mOlkeler;
-//
-//    ListView lv;
-//
-//
-//
-////    String[] names={"Azərbaycan","Ermənistan ","Almaniya","Bolqarıstan","Barbados","Mərakeş","Estoniya","Hindistan", "Zimbabve"};
-////    int[] images = {R.drawable.azerbaijan_256,R.drawable.armenia_256,R.drawable.germany_256,R.drawable.bulgaria_256,
-////            R.drawable.barbados_256,R.drawable.morocco_256,R.drawable.estonia_256,R.drawable.india_256,R.drawable.zimbabwe_256};
-//
-//    private class Adapter extends BaseAdapter implements Filterable{
-//        Context c;
-//        ArrayList<Countries> countries;
-//        CustomFilter mFilter;
-//        ArrayList<Countries> filterList;
-//
-//        public Adapter(Context ctx,ArrayList<Countries> countries){
-//            this.c=ctx;
-//            this.countries= countries;
-//            this.filterList =countries;
-//        }
-//
-//
-//
-//        @Override
-//        public int getCount() {
-//            return countries.size();
-//        }
-//
-//        @Override
-//        public Object getItem(int position) {
-//            return countries.get(position);
-//        }
-//
-//        @Override
-//        public long getItemId(int position) {
-//            return countries.indexOf(getItem(position));
-//        }
-//
-//        @Override
-//        public View getView(int position, View convertView, ViewGroup parent) {
-//
-//            LayoutInflater inflater =(LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//
-//            if(convertView==null){
-//                convertView=inflater.inflate(R.layout.model,null);
-//            }
-////
-////            Countries o = getItem(position);
-//            TextView olke =  (TextView)convertView.findViewById(R.id.olke_list_item_olke);
-//            olke.setText(countries.get(position).getNameOlke());
-//
-//            TextView paytaxt =  (TextView)convertView.findViewById(R.id.olke_list_item_paytaxt);
-//            paytaxt.setText(countries.get(position).getPaytaxt());
-//
-//            ImageView imageView =(ImageView) convertView.findViewById(R.id.imageView);
-//            imageView.setImageResource(countries.get(position).getIconId());
-//            return convertView;
-//        }
-//        @Override
-//        public Filter getFilter() {
-//
-//            if(mFilter==null){
-//                mFilter= new CustomFilter();
-//            }
-//            return mFilter;
-//
-//        }
-//
-//        class CustomFilter extends Filter{
-//            @Override
-//            protected FilterResults performFiltering(CharSequence constraint) {
-//
-//                FilterResults results=new FilterResults();
-//                if(constraint!=null&&constraint.length()>0){
-//
-//                    constraint=constraint.toString().toLowerCase();
-//
-//                    ArrayList<Countries> filters =new ArrayList<>();
-//
-//                    for(int i = 0; i< filterList.size(); i++){
-//                        if(filterList.get(i).getNameOlke().toLowerCase().contains(constraint)){
-//                            Countries c = new Countries(filterList.get(i).getNameOlke(),filterList.get(i).getPaytaxt(), filterList.get(i).getIconId());
-//
-//                            filters.add(c);
-//
-//                        }
-//
-//                    }
-//                    results.count= filters.size();
-//                    results.values=filters;
-//
-//                }else {
-//                    results.count= filterList.size();
-//                    results.values=filterList;
-//                }
-//                return results;
-//            }
-//
-//            @Override
-//            protected void publishResults(CharSequence constraint, FilterResults results) {
-//
-//                countries  =(ArrayList<Countries>) results.values;
-////                notifyDataSetChanged();
-//                if (results.count > 0)
-//                {
-//                    notifyDataSetChanged();
-//                }
-//                else
-//                {
-//                    notifyDataSetInvalidated();
-//                }
-//
-//            }
-//        }
-//
-//    }
-//
-//    @Override
-//    public void onCreate(@Nullable Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setHasOptionsMenu(true);
-//
-//
-////       mOlkeler = CountryLab.get(getActivity()).getOlkeler();
-////        Adapter adapter = new Adapter(mOlkeler);
-////        lv.setAdapter(adapter);
-//
-//    }
-//
-//    @Nullable
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-//
-//
-//        View v= inflater.inflate(R.layout.list_item,container, false);
-//
-//
-//        lv =(ListView) v.findViewById(R.id.list_countries);
-//
-////
-////
-//
-//
-////
-//        getClassAdapter();
-//
-//
-//        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//
-//               Countries c= (Countries) parent.getAdapter().getItem(position);
-//                Log.d(TAG,c.getNameOlke()+" was Clicked");
-//
-//                Intent i = new Intent(getActivity(),CountryPagerActivity.class);
-//                i.putExtra(CountryFragment.EXTRA_OLKE_ID,c.getId());
-//                Log.d(TAG,c.getNameOlke()+" After intent");
-//                i.putExtra("name",c.getNameOlke());
-//                i.putExtra("capital",c.getPaytaxt());
-//                i.putExtra("img",c.getIconId());
-//                startActivity(i);
-//            }
-//        });
-//
-////
-//
-//
-//        return v;
-//
-//    }
-//
-//    private Adapter getClassAdapter(){
-//
-//            mOlkeler = CountryLab.get(getActivity()).getOlkeler();
-//            Adapter adapter = new Adapter(getActivity(), mOlkeler);
-//            lv.setAdapter(adapter);
-//
-//        return adapter;
-//    }
-//
-//    @Override
-//    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-//        super.onCreateOptionsMenu(menu, inflater);
-//        menu.clear();
-//        inflater.inflate(R.menu.menu_main, menu);
-//        MenuItem item = menu.findItem(R.id.menu_search);
-//
-//        SearchView searchView = (SearchView) item.getActionView();
-//        MenuItemCompat.setShowAsAction(item, MenuItemCompat.SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW | MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
-//        MenuItemCompat.setActionView(item, searchView);
-//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//            @Override
-//            public boolean onQueryTextSubmit(String query) {
-//                return false;
-//            }
-//
-//            @Override
-//            public boolean onQueryTextChange(String newText) {
-////
-////
-//                getClassAdapter().getFilter().filter(newText);
-//
-//
-//                return false;
-//            }
-//
-//
-//        });
-//    }
 
     private static final String TAG= "CountryListFragment";
     private ArrayList<Countries> mOlkeler;
@@ -271,6 +61,8 @@ public class CountryListFragment extends AppCompatActivity {
         adapter = new Adapter(getApplicationContext(), mOlkeler);
 
         lv.setAdapter(adapter);
+        lv.setFastScrollEnabled(true);
+        lv.setScrollBarStyle(View.SCROLLBARS_OUTSIDE_INSET);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -281,10 +73,9 @@ public class CountryListFragment extends AppCompatActivity {
 
                 Intent i = new Intent(getApplicationContext(),CountryPagerActivity.class);
                 i.putExtra(CountryFragment.EXTRA_OLKE_ID,c.getId());
-                Log.d(TAG,c.getNameOlke()+" After intent");
-                i.putExtra("name",c.getNameOlke());
-                i.putExtra("capital",c.getPaytaxt());
-                i.putExtra("img",c.getIconId());
+
+
+
                 startActivity(i);
             }
         });
@@ -334,6 +125,8 @@ public class CountryListFragment extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
+//        LLDA<Sfllfm
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -346,7 +139,10 @@ public class CountryListFragment extends AppCompatActivity {
         ArrayList<Countries> filterList;
 
 
-        public Adapter(Context ctx,ArrayList<Countries> countries){
+
+
+
+        public Adapter(Context ctx, ArrayList<Countries> countries){
 //            this.countries= new ArrayList<>();
 
             this.c=ctx;
@@ -425,7 +221,6 @@ public class CountryListFragment extends AppCompatActivity {
             return mFilter;
 
         }
-
 
 
         class CustomFilter extends Filter{

@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -21,6 +22,10 @@ import project.sabuhi.com.countries.R;
 public class CountryPagerActivity extends AppCompatActivity {
     private ViewPager mViewPager;
     private ArrayList<Countries> mOlkeler;
+
+
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState){

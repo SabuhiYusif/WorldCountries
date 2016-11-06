@@ -2,10 +2,12 @@ package com.example.sabuh.worldcountries;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -18,6 +20,8 @@ import android.widget.TextView;
 import java.util.UUID;
 
 import project.sabuhi.com.countries.R;
+
+import static android.R.attr.id;
 
 /**
  * Created by Sabuh on 10/30/2016.
@@ -55,10 +59,11 @@ public class CountryFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setHasOptionsMenu(true);
+
         mOlke = new Countries(0);
         UUID olkeId=(UUID)getArguments().getSerializable(EXTRA_OLKE_ID);
         mOlke =CountryLab.get(getActivity()).getOlke(olkeId);
+
 
 //
 //        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -80,6 +85,13 @@ public class CountryFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.activity_main, parent, false);
+        Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar);
+        toolbar.setTitle(mOlke.getNameOlke());
+
+
+        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+        ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
 
         mOlkeAdi = (TextView) v.findViewById(R.id.olke_adi);
@@ -104,17 +116,11 @@ public class CountryFragment extends Fragment {
         mBayraqImg = (ImageView) v.findViewById(R.id.bayraq_img);
         mBayraqImg.setImageResource(mOlke.getImageId());
 
-        getActivity().setTitle(mOlke.getNameOlke());
-        Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar);
-        toolbar.setTitle(mOlke.getNameOlke());
 
 
 
 
-        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
-        ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setHomeButtonEnabled(true);
+//        actionBar.setHomeButtonEnabled(true);
 //        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
@@ -124,22 +130,28 @@ public class CountryFragment extends Fragment {
         return v;
     }
 
+
+
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        menu.clear();
-        inflater.inflate(R.menu.menu_main, menu);
+
+
         super.onCreateOptionsMenu(menu, inflater);
 
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            if (getActivity() != null) {
-                getActivity().onBackPressed();
-            }
-            return true;
+        int id = item.getItemId();
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(getActivity());
+                return true;
         }
+
+
+
         return super.onOptionsItemSelected(item);
 
     }

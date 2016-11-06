@@ -5,6 +5,8 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:context="com.example.sabuh.worldcountries.CountryListFragment"
     >
 
 
@@ -17,7 +19,7 @@
         android:gravity="start"
         android:padding="4dp"
         android:text="@string/olke_adi_list"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/olke_list_item_paytaxt"
         android:layout_alignStart="@+id/olke_list_item_paytaxt"/>
@@ -26,8 +28,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="4dp"
-        android:text="Paytaxti"
-        android:textStyle="italic"
+
+        android:text="@string/paytaxti_list"
+        android:textColor="#000"
+
         android:layout_below="@+id/olke_list_item_olke"
         android:layout_toRightOf="@+id/imageView"
         android:layout_toEndOf="@+id/imageView"
@@ -37,7 +41,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:contentDescription="@null"
-        android:paddingTop="35dp"
+        android:paddingTop="40dp"
         android:src="@drawable/afghanistan_256"
         android:id="@+id/imageView"
         android:layout_alignBottom="@+id/olke_list_item_paytaxt"
