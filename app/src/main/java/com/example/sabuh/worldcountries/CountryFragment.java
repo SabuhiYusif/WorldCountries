@@ -60,9 +60,11 @@ public class CountryFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mOlke = new Countries(0);
+        mOlke = new Countries("dsd","das",0);
         UUID olkeId=(UUID)getArguments().getSerializable(EXTRA_OLKE_ID);
         mOlke =CountryLab.get(getActivity()).getOlke(olkeId);
+
+
 
 
 //
@@ -85,13 +87,6 @@ public class CountryFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.activity_main, parent, false);
-        Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar);
-        toolbar.setTitle(mOlke.getNameOlke());
-
-
-        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
-        ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
 
 
         mOlkeAdi = (TextView) v.findViewById(R.id.olke_adi);
@@ -115,6 +110,20 @@ public class CountryFragment extends Fragment {
 
         mBayraqImg = (ImageView) v.findViewById(R.id.bayraq_img);
         mBayraqImg.setImageResource(mOlke.getImageId());
+//
+        Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar);
+        toolbar.setTitle(mOlke.getNameOlke());
+
+
+
+        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+        ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
+        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
+//        ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
+//        actionBar.setDisplayHomeAsUpEnabled(true);
+//        actionBar.setDisplayShowHomeEnabled(true);
 
 
 
@@ -130,7 +139,12 @@ public class CountryFragment extends Fragment {
         return v;
     }
 
-
+    @Override
+    public void onResume() {
+        super.onResume();
+//        ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
+//        actionBar.setDisplayHomeAsUpEnabled(true);
+    }
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
@@ -143,16 +157,13 @@ public class CountryFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        switch (item.getItemId()) {
-            // Respond to the action bar's Up/Home button
-            case android.R.id.home:
-                NavUtils.navigateUpFromSameTask(getActivity());
-                return true;
-        }
+        if (item.getItemId() == android.R.id.home) {
+        getActivity().onBackPressed();    //Call the back button's method
+        return true;
+    }
 
 
-
-        return super.onOptionsItemSelected(item);
+    return super.onOptionsItemSelected(item);
 
     }
 }

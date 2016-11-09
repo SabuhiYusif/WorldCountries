@@ -67,12 +67,18 @@ public class CountryListFragment extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+//
                 Countries c= (Countries) parent.getAdapter().getItem(position);
+
+
                 Log.d(TAG,c.getNameOlke()+" was Clicked");
+
+
 
                 Intent i = new Intent(getApplicationContext(),CountryPagerActivity.class);
                 i.putExtra(CountryFragment.EXTRA_OLKE_ID,c.getId());
+
+
 
 
 
@@ -125,7 +131,7 @@ public class CountryListFragment extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-//        LLDA<Sfllfm
+
 
 
         return super.onOptionsItemSelected(item);
@@ -148,16 +154,18 @@ public class CountryListFragment extends AppCompatActivity {
             this.c=ctx;
             this.countries= countries;
             this.filterList =countries;
-
         }
+
 
 
 
         @Override
         public int getCount() {
             
-            Log.d(TAG, "getCount: ");
+
             return countries.size();
+
+
 
         }
 
@@ -168,7 +176,7 @@ public class CountryListFragment extends AppCompatActivity {
 
         @Override
         public Object getItem(int position) {
-            Log.d(TAG, "getItem: ");
+
             return countries.get(position);
         }
 
@@ -217,6 +225,7 @@ public class CountryListFragment extends AppCompatActivity {
 
             if(mFilter==null){
                 mFilter= new CustomFilter();
+
             }
             return mFilter;
 
@@ -261,6 +270,7 @@ public class CountryListFragment extends AppCompatActivity {
                 if (results.count > 0)
                 {
                     notifyDataSetChanged();
+
                 }
                 else
                 {

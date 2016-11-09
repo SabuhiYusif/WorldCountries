@@ -255,7 +255,7 @@ public class CountryLab {
 //
 //
 
-        abs.setNameOlke("Amerika Birləşmiş Ştatları " );
+        abs.setNameOlke("Amerika Birləşmiş Ştatları" );
         abs.setPaytaxt("Vaşinqton DC");
         abs.setImageId(R.drawable.united_states_of_america_640);
         abs.setEhali("311,591,917");
@@ -1789,8 +1789,10 @@ public class CountryLab {
         mOlkeler.add(efq);
         mOlkeler.add(elc);
         mOlkeler.add(far);
-        mOlkeler.add(fel);
-        mOlkeler.add(fil);   mOlkeler.add(fra);
+//        mOlkeler.add(fel);
+        mOlkeler.add(fil);
+        mOlkeler.add(fin);
+          mOlkeler.add(fra);
         mOlkeler.add(hai);
         mOlkeler.add(hin);
         mOlkeler.add(hond);
@@ -1862,20 +1864,20 @@ public class CountryLab {
         mOlkeler.add(mont);
         mOlkeler.add(moz);
         mOlkeler.add(mya);
+//
+//        mOlkeler.add(nam);
+//        mOlkeler.add(nau);
+//        mOlkeler.add(nep);
+//        mOlkeler.add(nid);
+//        mOlkeler.add(nig);
+//        mOlkeler.add(nige);
+//        mOlkeler.add(nik);
+//        mOlkeler.add(niu);
+//        mOlkeler.add(nor);
+//        mOlkeler.add(norv);
+////
+//
 
-        mOlkeler.add(nam);
-        mOlkeler.add(nau);
-        mOlkeler.add(nep);
-        mOlkeler.add(nid);
-        mOlkeler.add(nig);
-        mOlkeler.add(nige);
-        mOlkeler.add(nik);
-        mOlkeler.add(niu);
-        mOlkeler.add(nor);
-        mOlkeler.add(norv);
-
-
-        mOlkeler.add(fin);
 
 
 
