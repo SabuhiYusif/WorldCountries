@@ -42,6 +42,7 @@ public class CountryFragment extends Fragment {
     private TextView mUDM;
 
     private TextView mQite;
+    private Toolbar toolbar;
 //    private Toolbar mToolbar;
 
     public static final String EXTRA_OLKE_ID = "com.example.sabuh.worldcountries.olke_id";
@@ -56,11 +57,12 @@ public class CountryFragment extends Fragment {
         fragment.setArguments(args);
         return  fragment;
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mOlke = new Countries("dsd","das",0);
+        mOlke = new Countries(0);
         UUID olkeId=(UUID)getArguments().getSerializable(EXTRA_OLKE_ID);
         mOlke =CountryLab.get(getActivity()).getOlke(olkeId);
 
@@ -82,6 +84,7 @@ public class CountryFragment extends Fragment {
 
 
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent,
                              Bundle savedInstanceState) {
@@ -111,7 +114,7 @@ public class CountryFragment extends Fragment {
         mBayraqImg = (ImageView) v.findViewById(R.id.bayraq_img);
         mBayraqImg.setImageResource(mOlke.getImageId());
 //
-        Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar);
+        toolbar = (Toolbar) v.findViewById(R.id.toolbar);
         toolbar.setTitle(mOlke.getNameOlke());
 
 
@@ -139,12 +142,8 @@ public class CountryFragment extends Fragment {
         return v;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-//        ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
-//        actionBar.setDisplayHomeAsUpEnabled(true);
-    }
+
+
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {

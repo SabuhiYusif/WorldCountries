@@ -36,9 +36,10 @@ public class CountryPagerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mViewPager = new ViewPager(this);
         mViewPager.setId(R.id.viewPager);
+
         setContentView(mViewPager);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
 //        toolbar.setTitle(mOlke.getNameOlke());
 
 
