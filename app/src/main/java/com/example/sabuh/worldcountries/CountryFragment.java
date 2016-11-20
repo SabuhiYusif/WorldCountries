@@ -61,12 +61,9 @@ public class CountryFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        mOlke = new Countries(0);
+//
         UUID olkeId=(UUID)getArguments().getSerializable(EXTRA_OLKE_ID);
         mOlke =CountryLab.get(getActivity()).getOlke(olkeId);
-
-
 
 
 //
@@ -88,6 +85,7 @@ public class CountryFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent,
                              Bundle savedInstanceState) {
+//        setHasOptionsMenu(true);
 
         View v = inflater.inflate(R.layout.activity_main, parent, false);
 
@@ -118,26 +116,11 @@ public class CountryFragment extends Fragment {
         toolbar.setTitle(mOlke.getNameOlke());
 
 
-
+//
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
-        ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
-        actionBar.setHomeButtonEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
-
-//        ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
-//        actionBar.setDisplayHomeAsUpEnabled(true);
-//        actionBar.setDisplayShowHomeEnabled(true);
-
-
-
-
-
-//        actionBar.setHomeButtonEnabled(true);
-//        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-
-
-
+       ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        ((AppCompatActivity) getActivity()).getSupportActionBar().setShow(true);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
 
         return v;
     }
@@ -155,11 +138,12 @@ public class CountryFragment extends Fragment {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (item.getItemId() == android.R.id.home) {
-        getActivity().onBackPressed();    //Call the back button's method
-        return true;
-    }
+//        int id = item.getItemId();
+//        if (item.getItemId() == android.R.id.home) {
+//       Log.d("BackPressed"," ");
+//            getActivity().onBackPressed();//Call the back button's method
+//        return true;
+//    }
 
 
     return super.onOptionsItemSelected(item);

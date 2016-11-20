@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.Menu;
 import android.view.MenuItem;
 
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ import project.sabuhi.com.countries.R;
 public class CountryPagerActivity extends AppCompatActivity {
     private ViewPager mViewPager;
     private ArrayList<Countries> mOlkeler;
+    private Countries country;
 
 
 
@@ -37,8 +39,13 @@ public class CountryPagerActivity extends AppCompatActivity {
         mViewPager = new ViewPager(this);
         mViewPager.setId(R.id.viewPager);
 
+//        setContentView(R.layout.activity_main);
         setContentView(mViewPager);
-
+//
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//
 
 //        toolbar.setTitle(mOlke.getNameOlke());
 
@@ -47,7 +54,7 @@ public class CountryPagerActivity extends AppCompatActivity {
 //        setSupportActionBar(toolbar);
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        mOlkeler = CountryLab.get(getApplicationContext()).getOlkeler();
+        mOlkeler = CountryLab.get(this).getOlkeler();
 
         FragmentManager fm= getSupportFragmentManager();
 
@@ -62,7 +69,7 @@ public class CountryPagerActivity extends AppCompatActivity {
 
             @Override
             public Fragment getItem(int position) {
-                Countries country = mOlkeler.get(position);
+                country = mOlkeler.get(position);
                 return  CountryFragment.newInstance(country.getId());
 
             }
@@ -81,10 +88,36 @@ public class CountryPagerActivity extends AppCompatActivity {
         }
 
     }
+//    @Override
+//    public void onBackStackChanged() {
+//        shouldDisplayHomeUp();
+//    }
+//    public void shouldDisplayHomeUp(){
+//        //Enable Up button only  if there are entries in the back stack
+//        boolean canback = getSupportFragmentManager().getBackStackEntryCount()>0;
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(canback);
+//    }
+//    @Override
+//    public boolean onSupportNavigateUp() {
+//        //This method is called when the up button is pressed. Just the pop back stack.
+//        getSupportFragmentManager().popBackStack();
+//        return true;
+//    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return super.onCreateOptionsMenu(menu);
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            Log.d("BackPressedActivity"," ");
+            onBackPressed();//Call the back button's method
+            return true;
+        }
         return super.onOptionsItemSelected(item);
+//        return false;
     }
 //    @Override
 //    public void onBackPressed() {

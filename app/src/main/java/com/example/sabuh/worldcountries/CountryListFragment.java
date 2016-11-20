@@ -82,6 +82,7 @@ public class CountryListFragment extends AppCompatActivity {
 
 
 
+
                 startActivity(i);
             }
         });
@@ -137,8 +138,14 @@ public class CountryListFragment extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ((Adapter)lv.getAdapter()).notifyDataSetChanged();
+    }
 
     private class Adapter extends BaseAdapter implements Filterable {
+
         Context c;
         ArrayList<Countries> countries;
         CustomFilter mFilter= new CustomFilter();
@@ -161,7 +168,7 @@ public class CountryListFragment extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            
+
 
             return countries.size();
 
@@ -200,15 +207,15 @@ public class CountryListFragment extends AppCompatActivity {
         public View getView(int position, View convertView, ViewGroup parent) {
             View v=convertView;
             TestViewHolder holder = null;
-                if(v==null){
-                    LayoutInflater inflater =(LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                    v=inflater.inflate(R.layout.model,null);
-                    holder = new TestViewHolder(v);
-                    v.setTag(holder);
+            if(v==null){
+                LayoutInflater inflater =(LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                v=inflater.inflate(R.layout.model,null);
+                holder = new TestViewHolder(v);
+                v.setTag(holder);
 
-                }else{
-                        holder= (TestViewHolder) v.getTag();
-                }
+            }else{
+                holder= (TestViewHolder) v.getTag();
+            }
 
 //
             holder.olkeHolder.setText(countries.get(position).getNameOlke());
@@ -244,10 +251,10 @@ public class CountryListFragment extends AppCompatActivity {
                     ArrayList<Countries> filters =new ArrayList<>();
 
                     for(int i = 0; i< filterList.size(); i++){
-                        if(filterList.get(i).getNameOlke().toLowerCase().contains(constraint)){
-                            Countries c = new Countries(filterList.get(i).getNameOlke(),filterList.get(i).getPaytaxt(), filterList.get(i).getIconId());
+                        if(filterList.get(i).getNameOlke().toLowerCase().startsWith(constraint.toString().toLowerCase())){
+                            // Countries c = new Countries(filterList.get(i).getNameOlke(),filterList.get(i).getPaytaxt(), filterList.get(i).getIconId());
 
-                            filters.add(c);
+                            filters.add(filterList.get(i));
 
                         }
 
@@ -279,7 +286,6 @@ public class CountryListFragment extends AppCompatActivity {
 
             }
         }
-
 
     }
 
