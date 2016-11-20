@@ -23,8 +23,16 @@ public class Countries {
 
     public Countries(int iconId){
         this.iconId = iconId;
-        mId=UUID.randomUUID();
+        this.mId=UUID.randomUUID();
     }
+
+    public Countries(String nameOlke,String namePaytaxt, int iconId){
+       this.mNameOlke=nameOlke;
+        this.iconId=iconId;
+        this.Paytaxt = namePaytaxt;
+      //  mId=UUID.randomUUID();
+    }
+
 
 
 
@@ -93,7 +101,9 @@ public class Countries {
         return iconId;
     }
 
-
+    public void setIconId(int iconId) {
+        this.iconId = iconId;
+    }
 
 
     public String getEhali() {

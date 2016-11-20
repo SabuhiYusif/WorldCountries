@@ -6,8 +6,8 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:fastScrollThumbDrawable">@drawable/apptheme_fastscroll_thumb_default_holo</item>
-        <item name="android:fastScrollTrackDrawable">@drawable/c_fastscroller_preview</item>
+        <!--<item name="android:fastScrollThumbDrawable">@drawable/apptheme_fastscroll_thumb_default_holo</item>-->
+        <!--<item name="android:fastScrollTrackDrawable">@drawable/c_fastscroller_preview</item>-->
         <item name="android:fastScrollOverlayPosition">aboveThumb</item>
         <item name="android:fastScrollTextColor">@color/colorPrimary</item>
     </style>

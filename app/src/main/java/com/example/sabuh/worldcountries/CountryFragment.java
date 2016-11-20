@@ -112,15 +112,15 @@ public class CountryFragment extends Fragment {
         mBayraqImg = (ImageView) v.findViewById(R.id.bayraq_img);
         mBayraqImg.setImageResource(mOlke.getImageId());
 //
-        toolbar = (Toolbar) v.findViewById(R.id.toolbar);
-        toolbar.setTitle(mOlke.getNameOlke());
+//        toolbar = (Toolbar) v.findViewById(R.id.toolbar);
+//        toolbar.setTitle(mOlke.getNameOlke());
 
 
 //
-        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
-       ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+//       ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //        ((AppCompatActivity) getActivity()).getSupportActionBar().setShow(true);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+//        ((AppCompatActivity) getActivity()).getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
 
         return v;
     }

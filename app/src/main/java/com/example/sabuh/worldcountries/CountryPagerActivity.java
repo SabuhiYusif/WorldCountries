@@ -1,5 +1,6 @@
 package com.example.sabuh.worldcountries;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -25,9 +26,11 @@ import project.sabuhi.com.countries.R;
  */
 
 public class CountryPagerActivity extends AppCompatActivity {
+    private static final String TAG ="TAG" ;
     private ViewPager mViewPager;
     private ArrayList<Countries> mOlkeler;
     private Countries country;
+    private Toolbar toolbar;
 
 
 
@@ -36,23 +39,12 @@ public class CountryPagerActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        mViewPager = new ViewPager(this);
-        mViewPager.setId(R.id.viewPager);
+//        mViewPager = new ViewPager(this);
+//        mViewPager.setId(R.id.viewPager);
 
-//        setContentView(R.layout.activity_main);
-        setContentView(mViewPager);
-//
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//
-
-//        toolbar.setTitle(mOlke.getNameOlke());
-
-
-
-//        setSupportActionBar(toolbar);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setContentView(R.layout.activity_pager);
+        //initialize components in view
+        initialize();
 
         mOlkeler = CountryLab.get(this).getOlkeler();
 
@@ -80,12 +72,29 @@ public class CountryPagerActivity extends AppCompatActivity {
 
         UUID olkeId = (UUID)getIntent()
                 .getSerializableExtra(CountryFragment.EXTRA_OLKE_ID);
+        Log.d(TAG, "onCreate: "+olkeId);
+        Log.d(TAG, "onCreate: "+mOlkeler.size());
         for (int i = 0; i < mOlkeler.size(); i++) {
             if (mOlkeler.get(i).getId().equals(olkeId)) {
+                Log.d(TAG, "onCreate: equals");
                 mViewPager.setCurrentItem(i);
                 break;
             }
         }
+
+    }
+
+    private  void  initialize() {
+
+        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Country Details");
+        toolbar.setTitleTextColor(Color.WHITE);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+
 
     }
 //    @Override

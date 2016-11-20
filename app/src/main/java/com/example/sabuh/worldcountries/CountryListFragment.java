@@ -67,11 +67,14 @@ public class CountryListFragment extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
 //
                 Countries c= (Countries) parent.getAdapter().getItem(position);
+                Log.d(TAG, "onItemClick: "+c.getId());
 
 
-                Log.d(TAG,c.getNameOlke()+" was Clicked");
+
+                Log.d(TAG,c.getNameOlke()+" was Clicked"+position);
 
 
 
@@ -80,8 +83,8 @@ public class CountryListFragment extends AppCompatActivity {
 
 
 
-
-
+//53009e8a-9a9e-4d4f-90b5-a1a4ad9ddce7
+//f3e691a6-b99f-4132-8492-737bedf35066
 
                 startActivity(i);
             }
@@ -138,19 +141,12 @@ public class CountryListFragment extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        ((Adapter)lv.getAdapter()).notifyDataSetChanged();
-    }
 
     private class Adapter extends BaseAdapter implements Filterable {
-
         Context c;
         ArrayList<Countries> countries;
         CustomFilter mFilter= new CustomFilter();
         ArrayList<Countries> filterList;
-
 
 
 
@@ -161,6 +157,7 @@ public class CountryListFragment extends AppCompatActivity {
             this.c=ctx;
             this.countries= countries;
             this.filterList =countries;
+
         }
 
 
@@ -168,7 +165,7 @@ public class CountryListFragment extends AppCompatActivity {
 
         @Override
         public int getCount() {
-
+            
 
             return countries.size();
 
@@ -207,15 +204,15 @@ public class CountryListFragment extends AppCompatActivity {
         public View getView(int position, View convertView, ViewGroup parent) {
             View v=convertView;
             TestViewHolder holder = null;
-            if(v==null){
-                LayoutInflater inflater =(LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                v=inflater.inflate(R.layout.model,null);
-                holder = new TestViewHolder(v);
-                v.setTag(holder);
+                if(v==null){
+                    LayoutInflater inflater =(LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                    v=inflater.inflate(R.layout.model,null);
+                    holder = new TestViewHolder(v);
+                    v.setTag(holder);
 
-            }else{
-                holder= (TestViewHolder) v.getTag();
-            }
+                }else{
+                        holder= (TestViewHolder) v.getTag();
+                }
 
 //
             holder.olkeHolder.setText(countries.get(position).getNameOlke());
@@ -239,6 +236,7 @@ public class CountryListFragment extends AppCompatActivity {
         }
 
 
+
         class CustomFilter extends Filter{
             @Override
             protected FilterResults performFiltering(CharSequence constraint) {
@@ -251,8 +249,9 @@ public class CountryListFragment extends AppCompatActivity {
                     ArrayList<Countries> filters =new ArrayList<>();
 
                     for(int i = 0; i< filterList.size(); i++){
-                        if(filterList.get(i).getNameOlke().toLowerCase().startsWith(constraint.toString().toLowerCase())){
-                            // Countries c = new Countries(filterList.get(i).getNameOlke(),filterList.get(i).getPaytaxt(), filterList.get(i).getIconId());
+                        if(filterList.get(i).getNameOlke().toLowerCase().contains(constraint)){
+//                            Countries c = new Countries(filterList.get(i).getNameOlke(),filterList.get(i).getPaytaxt(), filterList.get(i).getIconId());
+
 
                             filters.add(filterList.get(i));
 
@@ -276,16 +275,21 @@ public class CountryListFragment extends AppCompatActivity {
 
                 if (results.count > 0)
                 {
-                    notifyDataSetChanged();
+                    Log.d(TAG, "publishResults: "+adapter.getCount());
+                    adapter.notifyDataSetChanged();
+                    Log.d(TAG, "publishResults: "+adapter.getCount());
+
 
                 }
                 else
                 {
+                    Log.d(TAG, "publishResults: invalidated");
                     notifyDataSetInvalidated();
                 }
 
             }
         }
+
 
     }
 
