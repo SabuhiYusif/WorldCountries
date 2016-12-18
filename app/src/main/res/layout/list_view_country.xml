@@ -2,7 +2,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 xmlns:tools="http://schemas.android.com/tools"
-
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -11,15 +10,11 @@
 
 
     <ListView
-
         android:divider="@android:color/transparent"
-        android:dividerHeight="12dp"
         android:scrollbarAlwaysDrawVerticalTrack="false"
-
         android:id="@+id/list_countries"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbarStyle="outsideInset"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_height="wrap_content"
+        />
+
 </RelativeLayout>

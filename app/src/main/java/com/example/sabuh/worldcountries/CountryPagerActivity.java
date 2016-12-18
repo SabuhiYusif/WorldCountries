@@ -1,5 +1,6 @@
 package com.example.sabuh.worldcountries;
 
+
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -25,7 +26,7 @@ import project.sabuhi.com.countries.R;
  * Created by Sabuh on 11/1/2016.
  */
 
-public class CountryPagerActivity extends AppCompatActivity {
+public class CountryPagerActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
     private static final String TAG ="TAG" ;
     private ViewPager mViewPager;
     private ArrayList<Countries> mOlkeler;
@@ -33,8 +34,25 @@ public class CountryPagerActivity extends AppCompatActivity {
     private Toolbar toolbar;
 
 
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
 
 
+        @Override
+        public void onPageSelected(int position) {
+            Log.d(TAG, "onPageSelected: "+position);
+            Countries olke = mOlkeler.get(position);
+            if(olke.getNameOlke()!=null){
+                setTitle(olke.getNameOlke());
+            }
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -42,32 +60,69 @@ public class CountryPagerActivity extends AppCompatActivity {
 //        mViewPager = new ViewPager(this);
 //        mViewPager.setId(R.id.viewPager);
 
+
+
         setContentView(R.layout.activity_pager);
-        //initialize components in view
         initialize();
 
         mOlkeler = CountryLab.get(this).getOlkeler();
 
         FragmentManager fm= getSupportFragmentManager();
 
-        mViewPager.setAdapter(new FragmentPagerAdapter(fm) {
+        mViewPager.setAdapter(new FragmentStatePagerAdapter(fm) {
 
 
 
             @Override
             public int getCount() {
+
                 return mOlkeler.size();
+
             }
 
             @Override
             public Fragment getItem(int position) {
                 country = mOlkeler.get(position);
+                Log.d(TAG, "getItem: "+position);
+
+//                    setTitle(country.getNameOlke());
+
+
+
+
                 return  CountryFragment.newInstance(country.getId());
 
             }
         });
 
+        mViewPager.addOnPageChangeListener(this);
 
+
+
+//        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+//
+//            @Override
+//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+//
+//            }
+//
+//            @Override
+//            public void onPageSelected(int position) {
+//                Log.d(TAG, "onPageSelected: "+position);
+//                Countries olke = mOlkeler.get(position);
+//                if(olke.getNameOlke()!=null){
+//                    setTitle(olke.getNameOlke());
+//               }
+//
+//
+//
+//            }
+//
+//            @Override
+//            public void onPageScrollStateChanged(int state) {
+//
+//            }
+//        });
 
 
         UUID olkeId = (UUID)getIntent()
@@ -78,9 +133,17 @@ public class CountryPagerActivity extends AppCompatActivity {
             if (mOlkeler.get(i).getId().equals(olkeId)) {
                 Log.d(TAG, "onCreate: equals");
                 mViewPager.setCurrentItem(i);
+                if(i==0){
+
+                    setTitle("Amerika Birləşmiş Ştatları");
+                }
+                Log.d(TAG, "onCreate: "+i);
                 break;
             }
         }
+
+
+
 
     }
 
@@ -88,30 +151,17 @@ public class CountryPagerActivity extends AppCompatActivity {
 
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Country Details");
+
         toolbar.setTitleTextColor(Color.WHITE);
         setSupportActionBar(toolbar);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
 
+
     }
-//    @Override
-//    public void onBackStackChanged() {
-//        shouldDisplayHomeUp();
-//    }
-//    public void shouldDisplayHomeUp(){
-//        //Enable Up button only  if there are entries in the back stack
-//        boolean canback = getSupportFragmentManager().getBackStackEntryCount()>0;
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(canback);
-//    }
-//    @Override
-//    public boolean onSupportNavigateUp() {
-//        //This method is called when the up button is pressed. Just the pop back stack.
-//        getSupportFragmentManager().popBackStack();
-//        return true;
-//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -128,10 +178,5 @@ public class CountryPagerActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
 //        return false;
     }
-//    @Override
-//    public void onBackPressed() {
-//        if ( mViewPager != null && mViewPager.getCurrentItem() != 0 ) {
-//            mViewPager.setCurrentItem(0);
-//        }
-//    }
+//
 }

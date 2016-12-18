@@ -7,6 +7,8 @@ import android.provider.ContactsContract;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.MenuItemCompat;
+import android.support.v4.view.ScrollingView;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
@@ -30,6 +32,8 @@ import android.widget.ListView;
 import android.widget.SectionIndexer;
 import android.widget.TextView;
 
+
+import java.lang.annotation.Annotation;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -62,14 +66,14 @@ public class CountryListFragment extends AppCompatActivity {
 
         lv.setAdapter(adapter);
         lv.setFastScrollEnabled(true);
-        lv.setScrollBarStyle(View.SCROLLBARS_OUTSIDE_INSET);
+//        lv.setScrollBarStyle(View.SCROLLBARS_OUTSIDE_INSET);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
 //
-                Countries c= (Countries) parent.getAdapter().getItem(position);
+                Countries c= (Countries) lv.getAdapter().getItem(position);
                 Log.d(TAG, "onItemClick: "+c.getId());
 
 
@@ -145,6 +149,7 @@ public class CountryListFragment extends AppCompatActivity {
     private class Adapter extends BaseAdapter implements Filterable {
         Context c;
         ArrayList<Countries> countries;
+
         CustomFilter mFilter= new CustomFilter();
         ArrayList<Countries> filterList;
 
@@ -224,6 +229,9 @@ public class CountryListFragment extends AppCompatActivity {
             holder.mImageView.setImageResource(countries.get(position).getIconId());
             return v;
         }
+
+
+
         @Override
         public Filter getFilter() {
 
@@ -249,7 +257,7 @@ public class CountryListFragment extends AppCompatActivity {
                     ArrayList<Countries> filters =new ArrayList<>();
 
                     for(int i = 0; i< filterList.size(); i++){
-                        if(filterList.get(i).getNameOlke().toLowerCase().contains(constraint)){
+                        if(filterList.get(i).getNameOlke().toLowerCase().startsWith((constraint.toString().toLowerCase()))){
 //                            Countries c = new Countries(filterList.get(i).getNameOlke(),filterList.get(i).getPaytaxt(), filterList.get(i).getIconId());
 
 

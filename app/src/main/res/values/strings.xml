@@ -2,7 +2,7 @@
     <string name="app_name">Countries</string>
     <string name="title_olke_activity">OlkeActivity</string>
     <string name="olke">Ölkə</string>
-    <string name="olke_adi">OlkeAdi</string>
+    <string name="olke_adi"><b>OlkeAdi</b></string>
     <string name="action_settings">Haqqında</string>
 
     <string name="olke_title">Dünya ölkələri</string>
@@ -15,4 +15,17 @@
     <string name="search_hint">Axtar..</string>
     <string name="title_activity_search">SearchActivity</string>
     <string name="paytaxti_list">Paytaxti</string>
+    <string name="erazi_say">Erazi_say</string>
+    <string name="erazi">Ərazi, km<sup><font size="8">2</font></sup></string>
+    <string name="dil">Dil</string>
+    <string name="diller">diller</string>
+    <string name="valyuta">Valyuta</string>
+    <string name="valyutalar">valyutalar</string>
+    <string name="udm_deyer">udm_deyer</string>
+    <string name="udm">ÜDM(dollar)
+    </string>
+    <string name="tel_kodlari">telkodlari</string>
+    <string name="tel_kodu">Telefon kodu</string>
+    <string name="qiteler">qiteler</string>
+    <string name="qite">Aid olduğu coğrafi bölgə</string>
 </resources>
