@@ -1,4 +1,4 @@
-package com.example.sabuh.worldcountries;
+package com.sbhapps.sabuh.worldcountries;
 
 import java.util.UUID;
 

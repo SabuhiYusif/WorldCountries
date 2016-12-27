@@ -1,41 +1,29 @@
-package com.example.sabuh.worldcountries;
+package com.sbhapps.sabuh.worldcountries;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.MenuItemCompat;
-import android.support.v4.view.ScrollingView;
-import android.support.v4.view.ViewCompat;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
-import android.widget.EditText;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.SectionIndexer;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
-import java.lang.annotation.Annotation;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import project.sabuhi.com.countries.R;
 
@@ -105,6 +93,23 @@ public class CountryListFragment extends AppCompatActivity {
 
     }
 
+    private boolean onBackPressedDouble=false;
+    @Override
+    public void onBackPressed() {
+        if(onBackPressedDouble) {
+            super.onBackPressed();
+        }
+        this.onBackPressedDouble=true;
+        Toast.makeText(this,"Çıxmaq üçün bir daha basın",Toast.LENGTH_SHORT).show();
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                onBackPressedDouble=false;
+            }
+        }, 2000);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -137,6 +142,8 @@ public class CountryListFragment extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            Toast.makeText(this,"Haqqinda Clikced",Toast.LENGTH_SHORT).show();
             return true;
         }
 

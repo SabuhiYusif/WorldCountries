@@ -1,19 +1,15 @@
-package com.example.sabuh.worldcountries;
+package com.sbhapps.sabuh.worldcountries;
 
 
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -85,11 +81,6 @@ public class CountryPagerActivity extends AppCompatActivity implements ViewPager
                 country = mOlkeler.get(position);
                 Log.d(TAG, "getItem: "+position);
 
-//                    setTitle(country.getNameOlke());
-
-
-
-
                 return  CountryFragment.newInstance(country.getId());
 
             }
@@ -97,32 +88,6 @@ public class CountryPagerActivity extends AppCompatActivity implements ViewPager
 
         mViewPager.addOnPageChangeListener(this);
 
-
-
-//        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-//
-//            @Override
-//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-//
-//            }
-//
-//            @Override
-//            public void onPageSelected(int position) {
-//                Log.d(TAG, "onPageSelected: "+position);
-//                Countries olke = mOlkeler.get(position);
-//                if(olke.getNameOlke()!=null){
-//                    setTitle(olke.getNameOlke());
-//               }
-//
-//
-//
-//            }
-//
-//            @Override
-//            public void onPageScrollStateChanged(int state) {
-//
-//            }
-//        });
 
 
         UUID olkeId = (UUID)getIntent()

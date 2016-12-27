@@ -1,4 +1,4 @@
-package com.example.sabuh.worldcountries;
+package com.sbhapps.sabuh.worldcountries;
 
 import android.content.Context;
 
@@ -48,6 +48,7 @@ public class CountryLab {
         Countries ber = new Countries(R.drawable.bermuda_256);
         Countries bee = new Countries(R.drawable.united_arab_emirates_256);
         Countries beh = new Countries(R.drawable.bahrain_256);
+        Countries birK = new Countries(R.drawable.united_kingdom_256);
         Countries bol = new Countries(R.drawable.bolivia_256);
         Countries bolq = new Countries(R.drawable.bulgaria_256);
         Countries bos = new Countries(R.drawable.bosnia_and_herzegovina_256);
@@ -494,6 +495,17 @@ public class CountryLab {
         beh.setUDM("32.22 milyard");
         beh.setQite("Asiya");
 
+        birK.setNameOlke("Birləşmiş Krallıq");
+        birK.setPaytaxt("London");
+        birK.setImageId(R.drawable.united_kingdom_640);
+        birK.setEhali("62 698 362");
+        birK.setErazi("243 809 (Ərazi Reytinqi: 78)");
+        birK.setDil("İngilis");
+        birK.setValyuta("Pound Sterlinq");
+        birK.setTelKod("+44");
+        birK.setUDM("2848.76 milyard");
+        birK.setQite("Avropa");
+
         bol.setNameOlke("Boliviya");
         bol.setPaytaxt("Sukre");
         bol.setImageId(R.drawable.bolivia_640);
@@ -808,8 +820,8 @@ public class CountryLab {
         efq.setUDM("19.20 milyard");
         efq.setQite("Asiya");
 
-        elc.setNameOlke("Əlcazair");
-        elc.setPaytaxt("Əlcazair");
+        elc.setNameOlke("Əlcəzair");
+        elc.setPaytaxt("Əlcəzair");
         elc.setImageId(R.drawable.algeria_640);
         elc.setEhali("35 980 193");
         elc.setErazi("2 381 740 (Ərazi Reytinqi: 11)");
@@ -1086,7 +1098,7 @@ public class CountryLab {
         kan.setDil("İngilis, Fransız");
         kan.setValyuta("Dollar");
         kan.setTelKod("+1");
-        kan.setUDM("1,565 milyard");
+        kan.setUDM("1550.54 milyard");
         kan.setQite("Şimali Amerika");
 
 
@@ -1190,7 +1202,7 @@ public class CountryLab {
         konR.setUDM("8.55 milyard");
         konR.setQite("Afrika");
 
-        korX.setNameOlke("Şimali Korea");
+        korX.setNameOlke("Şimali Koreya");
         korX.setPaytaxt("Pxenyan");
         korX.setImageId(R.drawable.korea_north_640);
         korX.setEhali("24 451 285");
@@ -1201,9 +1213,9 @@ public class CountryLab {
         korX.setUDM("17.44 milyard");
         korX.setQite("Asiya");
 
-        korR.setNameOlke("Korea Respublikası");
+        korR.setNameOlke("Cənubi Koreya");
         korR.setPaytaxt("Seul");
-        korR.setImageId(R.drawable.korea_north_640);
+        korR.setImageId(R.drawable.korea_south_640);
         korR.setEhali("49 779 000");
         korR.setErazi("98 480 (Ərazi Reytinqi: 109)");
         korR.setDil("Koreya");
@@ -1691,7 +1703,7 @@ public class CountryLab {
         moz.setImageId(R.drawable.mozambique_640);
         moz.setEhali("23 929 708");
         moz.setErazi("801 590 (Ərazi Reytinqi: 36)");
-        moz.setDil("İmaxua, Xiçanqaana, Portuqal");
+        moz.setDil("İmaxua, Xiçanqana, Portuqal");
         moz.setValyuta("Metikal");
         moz.setTelKod("+258");
         moz.setUDM("14.69 milyard");
@@ -1700,168 +1712,862 @@ public class CountryLab {
         mya.setNameOlke("Myanma");
         mya.setPaytaxt("Naypyida");
         mya.setImageId(R.drawable.myanmar_640);
+        mya.setEhali("48 336 763");
+        mya.setErazi("678 500 (Ərazi Reytinqi: 40)");
+        mya.setDil("Burmiz");
+        mya.setValyuta("Kyat");
+        mya.setTelKod("+95");
+        mya.setUDM("64.87 milyard");
+        mya.setQite("Asiya");
 
         nam.setNameOlke("Namibiya");
         nam.setPaytaxt("Vindhuk");
         nam.setImageId(R.drawable.namibia_640);
+        nam.setEhali("2 324 004");
+        nam.setErazi("825 418 (Ərazi Reytinqi: 34)");
+        nam.setDil("İngilis, Yerli dil, Alman");
+        nam.setValyuta("Namibiya Dolları");
+        nam.setTelKod("+264");
+        nam.setUDM("11.55 milyard");
+        nam.setQite("Afrika");
 
         nau.setNameOlke("Nauru");
         nau.setPaytaxt("Yaren");
         nau.setImageId(R.drawable.nauru_640);
+        nau.setEhali("11 320");
+        nau.setErazi("21.3 (Ərazi Reytinqi: 222)");
+        nau.setDil("Naurun, İngilis");
+        nau.setValyuta("Avstraliya Dolları");
+        nau.setTelKod("+674");
+        nau.setUDM("0.153 milyard");
+        nau.setQite("Avstraliya");
+
 
         nep.setNameOlke("Nepal");
         nep.setPaytaxt("Kartmandu");
         nep.setImageId(R.drawable.nepal_640);
+        nep.setEhali("30 485 798");
+        nep.setErazi("147 181 (Ərazi Reytinqi: 94)");
+        nep.setDil("Nepal, Mayithali");
+        nep.setValyuta("Nepal Rupisi");
+        nep.setTelKod("+977");
+        nep.setUDM("20.88 milyard");
+        nep.setQite("Asiya");
 
         nig.setNameOlke("Niger");
         nig.setPaytaxt("Niamey");
         nig.setImageId(R.drawable.niger_640);
+        nig.setEhali("177 155 754");
+        nig.setErazi("1 267 000 (Ərazi Reytinqi: 22)");
+        nig.setDil("Fransız");
+        nig.setValyuta("Qərbi Afrika Frankı");
+        nig.setTelKod("+227");
+        nig.setUDM("7.14 milyard");
+        nig.setQite("Afrika");
 
         nige.setNameOlke("Nigeriya");
         nige.setPaytaxt("Abuca");
         nige.setImageId(R.drawable.nigeria_640);
+        nige.setEhali("152 217 341");
+        nige.setErazi("923 768 (Ərazi Reytinqi: 32)");
+        nige.setDil("İngilis");
+        nige.setValyuta("Naira");
+        nige.setTelKod("+234");
+        nige.setUDM("481.07 milyard");
+        nige.setQite("Afrika");
 
         nik.setNameOlke("Nikaraqua");
         nik.setPaytaxt("Manaqua");
         nik.setImageId(R.drawable.nicaragua_640);
+        nik.setEhali("5 742 300");
+        nik.setErazi("129 494 (Ərazi Reytinqi: 98)");
+        nik.setDil("İspan");
+        nik.setValyuta("Kordoba");
+        nik.setTelKod("+505");
+        nik.setUDM("12.69 milyard");
+        nik.setQite("Şimali Amerika");
 
         niu.setNameOlke("Niue");
         niu.setPaytaxt("Alofi");
         niu.setImageId(R.drawable.niue_640);
+        niu.setEhali("1 398");
+        niu.setErazi("260 (Ərazi Reytinqi: 209)");
+        niu.setDil("İngilis");
+        niu.setValyuta("Avstraliya Dolları");
+        niu.setTelKod("+683");
+        niu.setUDM("--");
+        niu.setQite("Avstraliya");
 
         nor.setNameOlke("Norfolk");
         nor.setPaytaxt("Kinqston");
         nor.setImageId(R.drawable.norfolk_island_640);
+        nor.setEhali("2 210");
+        nor.setErazi("34.6 (Ərazi Reytinqi: 219)");
+        nor.setDil("İngilis");
+        nor.setValyuta("Avstraliya Dolları");
+        nor.setTelKod("+672");
+        nor.setUDM("--");
+        nor.setQite("Avstraliya");
 
         norv.setNameOlke("Norveç");
         norv.setPaytaxt("Oslo");
         norv.setImageId(R.drawable.norway_640);
+        norv.setEhali("5 006 000");
+        norv.setErazi("385 186 (Ərazi Reytinqi: 67)");
+        norv.setDil("Norveç");
+        norv.setValyuta("Kron");
+        norv.setTelKod("+47");
+        norv.setUDM("388.31 milyard");
+        norv.setQite("Avropa");
 
         oma.setNameOlke("Oman");
         oma.setPaytaxt("Maskat");
         oma.setImageId(R.drawable.oman_640);
+        oma.setEhali("2 846 145");
+        oma.setErazi("212 460 (Ərazi Reytinqi: 85)");
+        oma.setDil("Ərəb");
+        oma.setValyuta("Riyal");
+        oma.setTelKod("+968");
+        oma.setUDM("70.25 milyard");
+        oma.setQite("Asiya");
 
         ozb.setNameOlke("Özbəkistan");
         ozb.setPaytaxt("Daşkənd");
         ozb.setImageId(R.drawable.uzbekistan_640);
+        ozb.setEhali("29 341 200");
+        ozb.setErazi("447 400 (Ərazi Reytinqi: 56)");
+        ozb.setDil("Özbək");
+        ozb.setValyuta("Soum");
+        ozb.setTelKod("+998");
+        ozb.setUDM("66.73 milyard");
+        ozb.setQite("Asiya");
+
 
         pak.setNameOlke("Pakistan");
         pak.setPaytaxt("İslamabad");
         pak.setImageId(R.drawable.pakistan_640);
+        pak.setEhali("190 291 129");
+        pak.setErazi("803 940 (Ərazi Reytinqi: 35)");
+        pak.setDil("İngilis, Urdu");
+        pak.setValyuta("Rupi");
+        pak.setTelKod("+92");
+        pak.setUDM("269.97 milyard");
+        pak.setQite("Asiya");
 
         pal.setNameOlke("Palau");
         pal.setPaytaxt("Nqerulmud");
         pal.setImageId(R.drawable.palau_640);
+        pal.setEhali("21 000");
+        pal.setErazi("458 (Ərazi Reytinqi: 195)");
+        pal.setDil("Palau, İngilis");
+        pal.setValyuta("Rupi");
+        pal.setTelKod("+680");
+        pal.setUDM("0.29 milyard");
+        pal.setQite("Avstraliya");
 
         pan.setNameOlke("Panama");
         pan.setPaytaxt("Panama");
         pan.setImageId(R.drawable.panama_640);
+        pan.setEhali("3 571 185");
+        pan.setErazi("78 200 (Ərazi Reytinqi: 119)");
+        pan.setDil("İspan");
+        pan.setValyuta("Balboa");
+        pan.setTelKod("+507");
+        pan.setUDM("52.13 milyard");
+        pan.setQite("Şimali Amerika");
 
-        pan.setNameOlke("Panama");
-        pan.setPaytaxt("Panama");
-        pan.setImageId(R.drawable.panama_640);
 
         pap.setNameOlke("Papua-Yeni-Qvineya");
         pap.setPaytaxt("Port Morsbi");
         pap.setImageId(R.drawable.papua_new_guinea_640);
+        pap.setEhali("6 187 591");
+        pap.setErazi("482 840 (Ərazi Reytinqi: 54)");
+        pap.setDil("İngilis, Tok Pisin");
+        pap.setValyuta("Kina");
+        pap.setTelKod("+675");
+        pap.setUDM("16.93 milyard");
+        pap.setQite("Avstraliya");
 
         par.setNameOlke("Paraqvay");
         par.setPaytaxt("Asunson");
         par.setImageId(R.drawable.paraguay_640);
+        par.setEhali("6 568 290");
+        par.setErazi("406 750 (Ərazi Reytinqi: 59)");
+        par.setDil("İspan, Quarani");
+        par.setValyuta("Quarani");
+        par.setTelKod("+595");
+        par.setUDM("27.62 milyard");
+        par.setQite("Cənubi Amerika");
 
         per.setNameOlke("Peru");
-        par.setPaytaxt("Lima");
-        par.setImageId(R.drawable.peru_640);
+        per.setPaytaxt("Lima");
+        per.setImageId(R.drawable.peru_640);
+        per.setEhali("29 461 933");
+        per.setErazi("1 285 220 (Ərazi Reytinqi: 20)");
+        per.setDil("İspan");
+        per.setValyuta("Nuevo sol");
+        per.setTelKod("+51");
+        per.setUDM("192.08 milyard");
+        per.setQite("Cənubi Amerika");
 
         pit.setNameOlke("Pitkern Adaları");
         pit.setPaytaxt("Adamstaun");
         pit.setImageId(R.drawable.pitcairn_islands_640);
+        pit.setEhali("67");
+        pit.setErazi("47 (Ərazi Reytinqi: 220)");
+        pit.setDil("İngilis");
+        pit.setValyuta("Yeni Zellandiya Dolları");
+        pit.setTelKod("+64");
+        pit.setUDM("--");
+        pit.setQite("Avstraliya");
 
         pol.setNameOlke("Polşa");
         pol.setPaytaxt("Varşava");
         pol.setImageId(R.drawable.poland_640);
+        pol.setEhali("38 501 000");
+        pol.setErazi("312 679 (Ərazi Reytinqi: 69)");
+        pol.setDil("Polşa");
+        pol.setValyuta("Zlot");
+        pol.setTelKod("+48");
+        pol.setUDM("474.78 milyard");
+        pol.setQite("Avropa");
 
         por.setNameOlke("Portuqaliya");
         por.setPaytaxt("Lissabon");
         por.setImageId(R.drawable.portugal_640);
+        por.setEhali("10 707 924");
+        por.setErazi("92 151 (Ərazi Reytinqi: 111)");
+        por.setDil("Portuqal");
+        por.setValyuta("Avro");
+        por.setTelKod("+351");
+        por.setUDM("198.93 milyard");
+        por.setQite("Avropa");
 
         puer.setNameOlke("Puerto-Riko");
         puer.setPaytaxt("San Xuan");
         puer.setImageId(R.drawable.puerto_rico_640);
+        puer.setEhali("3 106 690");
+        puer.setErazi("13 790 (Ərazi Reytinqi: 161)");
+        puer.setDil("İspan, İngilis");
+        puer.setValyuta("Dollar");
+        puer.setTelKod("+1");
+        puer.setUDM("103.10 milyard");
+        puer.setQite("Şimali Amerika");
 
         rua.setNameOlke("Ruanda");
         rua.setPaytaxt("Kiqali");
         rua.setImageId(R.drawable.rwanda_640);
+        rua.setEhali("12 337 138");
+        rua.setErazi("26 338 (Ərazi Reytinqi: 148)");
+        rua.setDil("İspan, İngilis");
+        rua.setValyuta("Ruanda Frankı");
+        rua.setTelKod("+250");
+        rua.setUDM("8.10 milyard");
+        rua.setQite("Afrika");
 
         rum.setNameOlke("Rumıniya");
         rum.setPaytaxt("Buxarest");
         rum.setImageId(R.drawable.romania_640);
+        rum.setEhali("21 390 000");
+        rum.setErazi("237 500 (Ərazi Reytinqi: 81)");
+        rum.setDil("Rumıniyan");
+        rum.setValyuta("Rumıniyan leu");
+        rum.setTelKod("+40");
+        rum.setUDM("177.95 milyard");
+        rum.setQite("Avropa");
 
         rus.setNameOlke("Rusiya");
         rus.setPaytaxt("Moskva");
         rus.setImageId(R.drawable.russia_640);
+        rus.setEhali("146 270 033");
+        rus.setErazi("17 098 246 (Ərazi Reytinqi: 1)");
+        rus.setDil("Rus");
+        rus.setValyuta("Rubl");
+        rus.setTelKod("+7");
+        rus.setUDM("1326.02 milyard");
+        rus.setQite("Asiya/Avropa");
 
         sal.setNameOlke("Salvador");
         sal.setPaytaxt("San Salvador");
         sal.setImageId(R.drawable.el_salvador_640);
+        sal.setEhali("6 900 000");
+        sal.setErazi("21 040 (Ərazi Reytinqi: 152)");
+        sal.setDil("Kastiliyan");
+        sal.setValyuta("ABŞ Dolları");
+        sal.setTelKod("+503");
+        sal.setUDM("25.85 milyard");
+        sal.setQite("Şimali Amerika");
 
         sam.setNameOlke("Samoa");
         sam.setPaytaxt("Apia");
         sam.setImageId(R.drawable.samoa_640);
+        sam.setEhali("188 540");
+        sam.setErazi("2 832 (Ərazi Reytinqi: 174)");
+        sam.setDil("Samoan");
+        sam.setValyuta("Tala");
+        sam.setTelKod("+685");
+        sam.setUDM("0.76 milyard");
+        sam.setQite("Avstraliya");
 
         san.setNameOlke("San-Marino");
         san.setPaytaxt("San Marino");
         san.setImageId(R.drawable.san_marino_640);
+        san.setEhali("32 075");
+        san.setErazi("61 (Ərazi Reytinqi: 218)");
+        san.setDil("İtaliyan");
+        san.setValyuta("Avro");
+        san.setTelKod("+3780549");
+        san.setUDM("1.982 milyard");
+        san.setQite("Avropa");
 
         sant.setNameOlke("San-Tome və Prinsipi");
         sant.setPaytaxt("San Tome");
         sant.setImageId(R.drawable.sao_tome_and_principe_640);
-
-
-        senb.setNameOlke("Sen-Bartelemi");
-        senb.setPaytaxt("Qustaviya");
-        senb.setImageId(R.drawable.saint_barthelemy_640);
+        sant.setEhali("168 526");
+        sant.setErazi("1001 (Ərazi Reytinqi: 183)");
+        sant.setDil("Portuqal");
+        sant.setValyuta("Dobra");
+        sant.setTelKod("+239");
+        sant.setUDM("0.34 milyard");
+        sant.setQite("Afrika");
 
         sene.setNameOlke("Seneqal");
         sene.setPaytaxt("Dakar");
         sene.setImageId(R.drawable.senegal_640);
+        sene.setEhali("14 100 000");
+        sene.setErazi("196 722 (Ərazi Reytinqi: 88)");
+        sene.setDil("Fransız");
+        sene.setValyuta("Qərbi Afrika Frankı");
+        sene.setTelKod("+221");
+        sene.setUDM("13.78 milyard");
+        sene.setQite("Afrika");
 
         senme.setNameOlke("Sen-Marten");
         senme.setPaytaxt("Mariqo");
         senme.setImageId(R.drawable.saint_martin_640);
+        senme.setEhali("74 852");
+        senme.setErazi("87 (Ərazi Reytinqi: 216)");
+        senme.setDil("İngilis");
+        senme.setValyuta("Dollar");
+        senme.setTelKod("+1");
+        senme.setUDM("1.394");
+        senme.setQite("Şimali Amerika");
 
         senp.setNameOlke("Sen-Pyer və Mikelon");
         senp.setPaytaxt("Sent Pyer");
         senp.setImageId(R.drawable.saint_pierre_and_miquelon_640);
+        senp.setEhali("5 888");
+        senp.setErazi("242 (Ərazi Reytinqi: 210)");
+        senp.setDil("Fransız");
+        senp.setValyuta("Avro");
+        senp.setTelKod("+508");
+        senp.setUDM("0.215 milyard");
+        senp.setQite("Şimali Amerika");
 
         sentk.setNameOlke("Sent-Kits və Nevis");
         sentk.setPaytaxt("Baster");
         sentk.setImageId(R.drawable.saint_kitts_and_nevis_640);
+        sentk.setEhali("49 898");
+        sentk.setErazi("261 (Ərazi Reytinqi: 208)");
+        sentk.setDil("İngilis");
+        sentk.setValyuta("Dollar");
+        sentk.setTelKod("+1-869");
+        sentk.setUDM("0.895 milyard");
+        sentk.setQite("Şimali Amerika");
 
         sentl.setNameOlke("Sent-Lüsiya");
         sentl.setPaytaxt("Kastris");
         sentl.setImageId(R.drawable.saint_lucia_640);
+        sentl.setEhali("160 145");
+        sentl.setErazi("617 (Ərazi Reytinqi: 191)");
+        sentl.setDil("İngilis");
+        sentl.setValyuta("Dollar");
+        sentl.setTelKod("+1-758");
+        sentl.setUDM("1.44 milyard");
+        sentl.setQite("Şimali Amerika");
 
         sentv.setNameOlke("Sent-Vinsent və Qrenadina");
         sentv.setPaytaxt("Kinqstaun");
         sentv.setImageId(R.drawable.saint_vincent_and_the_grenadines_640);
+        sentv.setEhali("117 534");
+        sentv.setErazi("389.3 (Ərazi Reytinqi: 201)");
+        sentv.setDil("İngilis");
+        sentv.setValyuta("Dollar");
+        sentv.setTelKod("+1-784");
+        sentv.setUDM("0.75 milyard");
+        sentv.setQite("Şimali Amerika");
 
         ser.setNameOlke("Serbiya");
         ser.setPaytaxt("Belqrad");
         ser.setImageId(R.drawable.serbia_640);
+        ser.setEhali("7 120 666");
+        ser.setErazi("88 361 (Ərazi Reytinqi: 114)");
+        ser.setDil("İngilis");
+        ser.setValyuta("Serb Dinarı");
+        ser.setTelKod("+381");
+        ser.setUDM("36.51 milyard");
+        ser.setQite("Avropa");
+
+        sey.setNameOlke("Seyşel adaları");
+        sey.setPaytaxt("Viktoriya");
+        sey.setImageId(R.drawable.seychelles_640);
+        sey.setEhali("87 476");
+        sey.setErazi("455 (Ərazi Reytinqi: 196)");
+        sey.setDil("Fransız, İngilis");
+        sey.setValyuta("Seyşel Rupisi");
+        sey.setTelKod("+248");
+        sey.setUDM("1.44 milyard");
+        sey.setQite("Avropa");
+
+        seu.setNameOlke("Səudiyyə Ərəbistan");
+        seu.setPaytaxt("Ər-Riyad");
+        seu.setImageId(R.drawable.saudi_arabia_640);
+        seu.setEhali("26 534 504");
+        seu.setErazi("2 149 000 (Ərazi Reytinqi: 15)");
+        seu.setDil("Ərəb");
+        seu.setValyuta("Riyal");
+        seu.setTelKod("+966");
+        seu.setUDM("646.00 milyard");
+        seu.setQite("Asiya");
 
 
-//
-//
-//
-//
-//
-//
+        sin.setNameOlke("Sinqapur");
+        sin.setPaytaxt("Sinqapur");
+        sin.setImageId(R.drawable.singapore_640);
+        sin.setEhali("4 987 600");
+        sin.setErazi("714.3 (Ərazi Reytinqi: 189)");
+        sin.setDil("İngilis, Malay");
+        sin.setValyuta("Sinqapur Dolları");
+        sin.setTelKod("+65");
+        sin.setUDM("292.74 milyard");
+        sin.setQite("Asiya");
 
-//
-//
-//
-//
+        slova.setNameOlke("Slovakiya");
+        slova.setPaytaxt("Bratislava");
+        slova.setImageId(R.drawable.slovakia_640);
+        slova.setEhali("5 424 925");
+        slova.setErazi("48 845 (Ərazi Reytinqi: 130)");
+        slova.setDil("Slovak");
+        slova.setValyuta("Avro");
+        slova.setTelKod("+421");
+        slova.setUDM("86.58 milyard");
+        slova.setQite("Avropa");
+
+        slove.setNameOlke("Sloveniya");
+        slove.setPaytaxt("Belqrad");
+        slove.setImageId(R.drawable.slovenia_640);
+        slove.setEhali("2 053 355");
+        slove.setErazi("20 253 (Ərazi Reytinqi: 154)");
+        slove.setDil("Sloven");
+        slove.setValyuta("Avro");
+        slove.setTelKod("+386");
+        slove.setUDM("42.75 milyard");
+        slove.setQite("Avropa");
+
+        sol.setNameOlke("Solomon adaları");
+        sol.setPaytaxt("Honiara");
+        sol.setImageId(R.drawable.solomon_islands_640);
+        sol.setEhali("478 000");
+        sol.setErazi("28 450 (Ərazi Reytinqi: 144)");
+        sol.setDil("İngilis");
+        sol.setValyuta("Dollar");
+        sol.setTelKod("+677");
+        sol.setUDM("1.16 milyard");
+        sol.setQite("Avstraliya");
+
+        som.setNameOlke("Somali");
+        som.setPaytaxt("Moqadişo");
+        som.setImageId(R.drawable.somalia_640);
+        som.setEhali("10 085 638");
+        som.setErazi("637 657 (Ərazi Reytinqi: 42)");
+        som.setDil("Somali, Ərəb");
+        som.setValyuta("Şillinq");
+        som.setTelKod("+252");
+        som.setUDM("5.95 milyard");
+        som.setQite("Afrika");
+
+        sud.setNameOlke("Sudan");
+        sud.setPaytaxt("Xartum");
+        sud.setImageId(R.drawable.sudan_640);
+        sud.setEhali("30 894 000");
+        sud.setErazi("1 886 068 (Ərazi Reytinqi: 10)");
+        sud.setDil("Ərəb");
+        sud.setValyuta("Sudan Poundu");
+        sud.setTelKod("+249");
+        sud.setUDM("84.07 milyard");
+        sud.setQite("Afrika");
+
+        surin.setNameOlke("Surinam");
+        surin.setPaytaxt("Paramaribo");
+        surin.setImageId(R.drawable.suriname_640);
+        surin.setEhali("520 000");
+        surin.setErazi("163 270 (Ərazi Reytinqi: 93)");
+        surin.setDil("Alman");
+        surin.setValyuta("Surinam Dolları");
+        surin.setTelKod("+597");
+        surin.setUDM("4.88 milyard");
+        surin.setQite("Cənubi Amerika");
+
+        suriy.setNameOlke("Suriya");
+        suriy.setPaytaxt("Dəməşq");
+        suriy.setImageId(R.drawable.syria_640);
+        suriy.setEhali("19 405 000");
+        suriy.setErazi("185 180 (Ərazi Reytinqi: 89)");
+        suriy.setDil("Ərəb");
+        suriy.setValyuta("Suriya Poundu");
+        suriy.setTelKod("+963");
+        suriy.setUDM("73.67 milyard");
+        suriy.setQite("Asiya");
+
+        sva.setNameOlke("Svazilend");
+        sva.setPaytaxt("Mbabane");
+        sva.setImageId(R.drawable.swaziland_640);
+        sva.setEhali("1 185 000");
+        sva.setErazi("17 363 (Ərazi Reytinqi: 158)");
+        sva.setDil("İngilis");
+        sva.setValyuta("Lilanqeli");
+        sva.setTelKod("+268");
+        sva.setUDM("4.06  milyard");
+        sva.setQite("Afrika");
+
+
+        sye.setNameOlke("Syerra-Leone");
+        sye.setPaytaxt("Fritaun");
+        sye.setImageId(R.drawable.sierra_leone_640);
+        sye.setEhali("5 363 669");
+        sye.setErazi("71 740 (Ərazi Reytinqi: 120)");
+        sye.setDil("İngilis");
+        sye.setValyuta("Leon");
+        sye.setTelKod("+232");
+        sye.setUDM("4.47 milyard");
+        sye.setQite("Afrika");
+
+        serqt.setNameOlke("Şərqi-Timur");
+        serqt.setPaytaxt("Dili");
+        serqt.setImageId(R.drawable.east_timor_640);
+        serqt.setEhali("1 066 409");
+        serqt.setErazi("15 007 (Ərazi Reytinqi: 159)");
+        serqt.setDil("Portuqal");
+        serqt.setValyuta("ABŞ Dolları");
+        serqt.setTelKod("+670");
+        serqt.setUDM("1.41 milyard");
+        serqt.setQite("Asiya");
+
+
+
+        sri.setNameOlke("Şri_Lanka");
+        sri.setPaytaxt("Şri Cayavardenepura Kotte");
+        sri.setImageId(R.drawable.sri_lanka_640);
+        sri.setEhali("21 338 000");
+        sri.setErazi("65 610 (Ərazi Reytinqi: 123)");
+        sri.setDil("Sinhala, Tamil");
+        sri.setValyuta("Rupi");
+        sri.setTelKod("+94");
+        sri.setUDM("82.32 milyard");
+        sri.setQite("Asiya");
+
+        tac.setNameOlke("Tacikistan");
+        tac.setPaytaxt("Düşənbə");
+        tac.setImageId(R.drawable.tajikistan_640);
+        tac.setEhali("8 439 700");
+        tac.setErazi("142 553 (Ərazi Reytinqi: 96)");
+        tac.setDil("Tacik");
+        tac.setValyuta("Somoni");
+        tac.setTelKod("+992");
+        tac.setUDM("7.85 milyard");
+        tac.setQite("Asiya");
+
+        tai.setNameOlke("Tailand");
+        tai.setPaytaxt("Banqkok");
+        tai.setImageId(R.drawable.thailand_640);
+        tai.setEhali("65 479 453");
+        tai.setErazi("514 000 (Ərazi Reytinqi: 50)");
+        tai.setDil("Tai");
+        tai.setValyuta("Baht");
+        tai.setTelKod("+66");
+        tai.setUDM("395.28 milyard");
+        tai.setQite("Asiya");
+
+        tan.setNameOlke("Tanzaniya");
+        tan.setPaytaxt("Dodoma");
+        tan.setImageId(R.drawable.tanzania_640);
+        tan.setEhali("49 639 138");
+        tan.setErazi("945 203 (Ərazi Reytinqi: 31)");
+        tan.setDil("Svahili, İngilis");
+        tan.setValyuta("Tanzaniya şillinqi");
+        tan.setTelKod("+255");
+        tan.setUDM("44.90 milyard");
+        tan.setQite("Afrika");
+
+
+        tay.setNameOlke("Taivan");
+        tay.setPaytaxt("Taybey");
+        tay.setImageId(R.drawable.republic_of_china_640);
+        tay.setEhali("23 174 528");
+        tay.setErazi("35 980 (Ərazi Reytinqi: 138)");
+        tay.setDil("Çin, Taivan");
+        tay.setValyuta("Dollar");
+        tay.setTelKod("+886");
+        tay.setUDM("530.04 milyard");
+        tay.setQite("Asiya");
+
+        toke.setNameOlke("Tokelau");
+        toke.setPaytaxt("Nukunonu");
+        toke.setImageId(R.drawable.tokelau_640);
+        toke.setEhali("1 411");
+        toke.setErazi("-- (Ərazi Reytinqi: --)");
+        toke.setDil("İngilis");
+        toke.setValyuta("Yeni Zellandiya Dolları");
+        toke.setTelKod("+690");
+        toke.setUDM("0.002 milyard");
+        toke.setQite("Avstraliya");
+
+
+        ton.setNameOlke("Tonqa");
+        ton.setPaytaxt("Nukualofa");
+        ton.setImageId(R.drawable.tonga_640);
+        ton.setEhali("120 898");
+        ton.setErazi("748 (Ərazi Reytinqi: 187)");
+        ton.setDil("İngilis, Tonqan");
+        ton.setValyuta("Payanqa");
+        ton.setTelKod("+676");
+        ton.setUDM("0.43 milyard");
+        ton.setQite("Avstraliya");
+
+        toq.setNameOlke("Toqo");
+        toq.setPaytaxt("Lome");
+        toq.setImageId(R.drawable.togo_640);
+        toq.setEhali("7 351 374");
+        toq.setErazi("56 785 (Ərazi Reytinqi: 126)");
+        toq.setDil("Fransız");
+        toq.setValyuta("Qərbi Afrika Frankı");
+        toq.setTelKod("+228");
+        toq.setUDM("4.00 milyard");
+        toq.setQite("Afrika");
+
+        tork.setNameOlke("Törks və Kakos adaları");
+        tork.setPaytaxt("Kobərn Taun");
+        tork.setImageId(R.drawable.turks_and_caicos_islands_640);
+        tork.setEhali("39 184");
+        tork.setErazi("430 (Ərazi Reytinqi: 199)");
+        tork.setDil("İngilis");
+        tork.setValyuta("Dollar");
+        tork.setTelKod("+1");
+        tork.setUDM("0.11 milyard");
+        tork.setQite("Şimali Amerika");
+
+        tri.setNameOlke("Trinidad və Tobaqo");
+        tri.setPaytaxt("Port of Speyn");
+        tri.setImageId(R.drawable.trinidad_and_tobago_640);
+        tri.setEhali("1 299 953");
+        tri.setErazi("5 128 (Ərazi Reytinqi: 171)");
+        tri.setDil("İngilis");
+        tri.setValyuta("Trinidad və Tobaqo Dolları");
+        tri.setTelKod("+1-868");
+        tri.setUDM("28.90 milyard");
+        tri.setQite("Şimali Amerika");
+
+        turki.setNameOlke("Türkiyə");
+        turki.setPaytaxt("Ankara");
+        turki.setImageId(R.drawable.turkey_640);
+        turki.setEhali("74 724 562");
+        turki.setErazi("783 562 (Ərazi Reytinqi: 37)");
+        turki.setDil("Türk");
+        turki.setValyuta("Türk Lirası");
+        turki.setTelKod("+90");
+        turki.setUDM("718.22 milyard");
+        turki.setQite("Asiya/Avropa");
+
+        turkm.setNameOlke("Türkmənistan");
+        turkm.setPaytaxt("Aşqabad");
+        turkm.setImageId(R.drawable.turkmenistan_640);
+        turkm.setEhali("5 042 000");
+        turkm.setErazi("491 200 (Ərazi Reytinqi: 52)");
+        turkm.setDil("Türkmən");
+        turkm.setValyuta("Türkmən Yeni Manatı(TMT)");
+        turkm.setTelKod("+993");
+        turkm.setUDM("37.33 milyard");
+        turkm.setQite("Asiya");
+
+        tuv.setNameOlke("Tuvalu");
+        tuv.setPaytaxt("Funafuti");
+        tuv.setImageId(R.drawable.tuvalu_640);
+        tuv.setEhali("10 544");
+        tuv.setErazi("26 (Ərazi Reytinqi: 221)");
+        tuv.setDil("Tuvaluan");
+        tuv.setValyuta("Avstraliya Dolları");
+        tuv.setTelKod("+688");
+        tuv.setUDM("0.4 milyard");
+        tuv.setQite("Avstraliya");
+
+        ukr.setNameOlke("Ukrayna");
+        ukr.setPaytaxt("Kiyev");
+        ukr.setImageId(R.drawable.ukraine_640);
+        ukr.setEhali("45 559 058");
+        ukr.setErazi("603 700 (Ərazi Reytinqi: 44)");
+        ukr.setDil("Ukrayna");
+        ukr.setValyuta("Ukrayna Qrivnası");
+        ukr.setTelKod("+380");
+        ukr.setUDM("90.62 milyard");
+        ukr.setQite("Avropa");
+
+        uol.setNameOlke("Uollis ve Futuna");
+        uol.setPaytaxt("Mata-Utu");
+        uol.setImageId(R.drawable.wallis_and_futuna_640);
+        uol.setEhali("15 500");
+        uol.setErazi("80 (Ərazi Reytinqi: 216)");
+        uol.setDil("Fransız");
+        uol.setValyuta("Frank");
+        uol.setTelKod("+681");
+        uol.setUDM("0.188 milyard");
+        uol.setQite("Avropa");
+
+
+        uqa.setNameOlke("Uqanda");
+        uqa.setPaytaxt("Kampala");
+        uqa.setImageId(R.drawable.uganda_640);
+        uqa.setEhali("35 620 977");
+        uqa.setErazi("236 040 (Ərazi Reytinqi: 83)");
+        uqa.setDil("İngilis");
+        uqa.setValyuta("Uqanda Şillinqi");
+        uqa.setTelKod("+256");
+        uqa.setUDM("26.37 milyard");
+        uqa.setQite("Afrika");
+
+
+        uru.setNameOlke("Uruqvay");
+        uru.setPaytaxt("Montevideo");
+        uru.setImageId(R.drawable.uruguay_640);
+        uru.setEhali("3 256 000");
+        uru.setErazi("176 220 (Ərazi Reytinqi: 91)");
+        uru.setDil("İspan");
+        uru.setValyuta("Uruqvay Pesosu");
+        uru.setTelKod("+598");
+        uru.setUDM("53.44 milyard");
+        uru.setQite("Cənubi Amerika");
+
+        van.setNameOlke("Vanuatu");
+        van.setPaytaxt("Port Villa");
+        van.setImageId(R.drawable.vanuatu_640);
+        van.setEhali("243 304");
+        van.setErazi("12 190 (Ərazi Reytinqi: 162)");
+        van.setDil("Bislama, İngilis, Fransız");
+        van.setValyuta("Vanuatu Vatu");
+        van.setTelKod("+678");
+        van.setUDM("0.81 milyard");
+        van.setQite("Avstraliya");
+
+        vat.setNameOlke("Vatikan");
+        vat.setPaytaxt("Vatikan");
+        vat.setImageId(R.drawable.vatican_city_640);
+        vat.setEhali("836");
+        vat.setErazi("0.44 (Ərazi Reytinqi: 225)");
+        vat.setDil("İtaliyan");
+        vat.setValyuta("Avro");
+        vat.setTelKod("+39");
+        vat.setUDM("--");
+        vat.setQite("Avropa");
+
+        ven.setNameOlke("Venesuela");
+        ven.setPaytaxt("Karakas");
+        ven.setImageId(R.drawable.venezuela_640);
+        ven.setEhali("29 335 489");
+        ven.setErazi("916 445 (Ərazi Reytinqi: 33)");
+        ven.setDil("İspan");
+        ven.setValyuta("Bolivar Fuertesi");
+        ven.setTelKod("+58");
+        ven.setUDM("509.97 milyard");
+        ven.setQite("Cənubi Amerika");
+
+        vye.setNameOlke("Vyetnam");
+        vye.setPaytaxt("Vyetnam");
+        vye.setImageId(R.drawable.vietnam_640);
+        vye.setEhali("90 549 390");
+        vye.setErazi("331 210 (Ərazi Reytinqi: 66)");
+        vye.setDil("Vyetnam");
+        vye.setValyuta("Vietnam donqu");
+        vye.setTelKod("+84");
+        vye.setUDM("193.60 milyard");
+        vye.setQite("Asiya");
+
+        yap.setNameOlke("Yaponiya");
+        yap.setPaytaxt("Tokio");
+        yap.setImageId(R.drawable.japan_640);
+        yap.setEhali("126 400 000");
+        yap.setErazi("377 944 (Ərazi Reytinqi: 61)");
+        yap.setDil("Yapon");
+        yap.setValyuta("Yen");
+        yap.setTelKod("+81");
+        yap.setUDM("4123.26 milyard");
+        yap.setQite("Asiya");
+
+        yem.setNameOlke("Yəmən");
+        yem.setPaytaxt("Səna");
+        yem.setImageId(R.drawable.yemen_640);
+        yem.setEhali("24 799 880");
+        yem.setErazi("527 970 (Ərazi Reytinqi: 49)");
+        yem.setDil("Ərəb");
+        yem.setValyuta("Yəmən Riyalı");
+        yem.setTelKod("+967");
+        yem.setUDM("37.13 milyard");
+        yem.setQite("Asiya");
+
+        yenik.setNameOlke("Yeni Kaledoniya");
+        yenik.setPaytaxt("Numea");
+        yenik.setImageId(R.drawable.new_caledonia_640);
+        yenik.setEhali("262 000");
+        yenik.setErazi("18 576 (Ərazi Reytinqi: 154)");
+        yenik.setDil("Fransız");
+        yenik.setValyuta("Frank");
+        yenik.setTelKod("+687");
+        yenik.setUDM("9.90 milyard");
+        yenik.setQite("Avstraliya");
+
+        yeniz.setNameOlke("Yeni Zelandiya");
+        yeniz.setPaytaxt("Vellinqton");
+        yeniz.setImageId(R.drawable.new_zealand_640);
+        yeniz.setEhali("4 443 900");
+        yeniz.setErazi("268 680 (Ərazi Reytinqi: 74)");
+        yeniz.setDil("İngilis, Maori");
+        yeniz.setValyuta("Yeni Zellandiya Dolları");
+        yeniz.setTelKod("+64");
+        yeniz.setUDM("173.75 milyard");
+        yeniz.setQite("Avstraliya");
+
+        yun.setNameOlke("Yunanıstan");
+        yun.setPaytaxt("Afina");
+        yun.setImageId(R.drawable.greece_640);
+        yun.setEhali("10 787 690");
+        yun.setErazi("131 957 (Ərazi Reytinqi: 97)");
+        yun.setDil("Yunan");
+        yun.setValyuta("Avro");
+        yun.setTelKod("+30");
+        yun.setUDM("195.21 milyard");
+        yun.setQite("Avropa");
+
+        zam.setNameOlke("Zambiya");
+        zam.setPaytaxt("Harare");
+        zam.setImageId(R.drawable.zambia_640);
+        zam.setEhali("12 935 000");
+        zam.setErazi("752 614 (Ərazi Reytinqi: 39)");
+        zam.setDil("İngilis");
+        zam.setValyuta("Zambia Kvaçası");
+        zam.setTelKod("+260");
+        zam.setUDM("22.06 milyard");
+        zam.setQite("Afrika");
+
+        zim.setNameOlke("Zimbabve");
+        zim.setPaytaxt("Lusaka");
+        zim.setImageId(R.drawable.zimbabwe_640);
+        zim.setEhali("12 161 000");
+        zim.setErazi("390 580 (Ərazi Reytinqi: 60)");
+        zim.setDil("İngilis, Şona");
+        zim.setValyuta("Zimbabve Dolları");
+        zim.setTelKod("+263");
+        zim.setUDM("13.89 milyard");
+        zim.setQite("Afrika");
+
+
 //
         mOlkeler.add(abs);
         mOlkeler.add(ams);
@@ -1880,21 +2586,22 @@ public class CountryLab {
         mOlkeler.add(bel);
         mOlkeler.add(belc);
         mOlkeler.add(beli);
-             mOlkeler.add(ber);
+        mOlkeler.add(ber);
         mOlkeler.add(bee);
         mOlkeler.add(ben);
         mOlkeler.add(beh);
+        mOlkeler.add(birK);
         mOlkeler.add(bol);
         mOlkeler.add(bolq);
         mOlkeler.add(bot);
         mOlkeler.add(bra);
-//
         mOlkeler.add(bur);
         mOlkeler.add(buru);
         mOlkeler.add(butan);
         mOlkeler.add(car);
         mOlkeler.add(cer);
         mOlkeler.add(ceb);
+        mOlkeler.add(korR);
         mOlkeler.add(cenS);
         mOlkeler.add(cib);
         mOlkeler.add(cad);
@@ -1926,6 +2633,7 @@ public class CountryLab {
         mOlkeler.add(iraq);
         mOlkeler.add(ira);
         mOlkeler.add(irl);
+        mOlkeler.add(isl);
         mOlkeler.add(isp);
         mOlkeler.add(isv);
         mOlkeler.add(ita);
@@ -1941,8 +2649,6 @@ public class CountryLab {
         mOlkeler.add(kom);
         mOlkeler.add(konD);
         mOlkeler.add(konR);
-        mOlkeler.add(korX);
-        mOlkeler.add(korR);
         mOlkeler.add(kub);
         mOlkeler.add(kuk);
         mOlkeler.add(kuv);
@@ -2014,16 +2720,57 @@ public class CountryLab {
         mOlkeler.add(sal);
         mOlkeler.add(sam);
         mOlkeler.add(sant);
-        mOlkeler.add(senb);
         mOlkeler.add(sene);
         mOlkeler.add(senme);
         mOlkeler.add(senp);
+        mOlkeler.add(sentk);
+        mOlkeler.add(sentl);
+        mOlkeler.add(sentv);
+        mOlkeler.add(ser);
+        mOlkeler.add(seu);
+        mOlkeler.add(sey);
+        mOlkeler.add(sin);
+        mOlkeler.add(slova);
+        mOlkeler.add(slove);
+        mOlkeler.add(sol);
+        mOlkeler.add(som);
+        mOlkeler.add(sud);
+        mOlkeler.add(surin);
+        mOlkeler.add(suriy);
+        mOlkeler.add(sva);
+        mOlkeler.add(sye);
+        mOlkeler.add(serqt);
+        mOlkeler.add(korX);
+        mOlkeler.add(sri);
+        mOlkeler.add(tac);
+        mOlkeler.add(tai);
+        mOlkeler.add(tan);
+        mOlkeler.add(tay);
+        mOlkeler.add(toke);
+        mOlkeler.add(ton);
+        mOlkeler.add(toq);
+        mOlkeler.add(tork);
+        mOlkeler.add(tri);
+        mOlkeler.add(turki);
+        mOlkeler.add(turkm);
+        mOlkeler.add(tuv);
+        mOlkeler.add(ukr);
+        mOlkeler.add(uol);
+        mOlkeler.add(uqa);
+        mOlkeler.add(uru);
+        mOlkeler.add(van);
+        mOlkeler.add(vat);
+        mOlkeler.add(ven);
+        mOlkeler.add(vye);
+        mOlkeler.add(yap);
+        mOlkeler.add(yem);
+        mOlkeler.add(yenik);
+        mOlkeler.add(yeniz);
+        mOlkeler.add(yun);
+        mOlkeler.add(zam);
+        mOlkeler.add(zim);
 ////
 //
-
-
-
-
 
     }
     public static CountryLab get(Context c) {

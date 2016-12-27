@@ -1,13 +1,8 @@
-package com.example.sabuh.worldcountries;
+package com.sbhapps.sabuh.worldcountries;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.NavUtils;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -20,8 +15,6 @@ import android.widget.TextView;
 import java.util.UUID;
 
 import project.sabuhi.com.countries.R;
-
-import static android.R.attr.id;
 
 /**
  * Created by Sabuh on 10/30/2016.

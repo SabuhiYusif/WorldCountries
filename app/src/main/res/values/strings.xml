@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Countries</string>
+    <string name="app_name">Dünya Ölkələri</string>
     <string name="title_olke_activity">OlkeActivity</string>
     <string name="olke">Ölkə</string>
     <string name="olke_adi"><b>OlkeAdi</b></string>
