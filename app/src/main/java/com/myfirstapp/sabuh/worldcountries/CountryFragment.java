@@ -1,4 +1,4 @@
-package com.sbhapps.sabuh.worldcountries;
+package com.myfirstapp.sabuh.worldcountries;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -127,8 +127,6 @@ public class CountryFragment extends Fragment {
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 
-        getActivity().getMenuInflater().inflate(R.menu.menu_fragment,menu);
-        MenuItem item= menu.findItem(R.id.action_settings);
 
 
         super.onCreateOptionsMenu(menu, inflater);

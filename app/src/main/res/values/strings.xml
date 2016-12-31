@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Dünya Ölkələri</string>
+    <string name="app_name">Ölkələr</string>
     <string name="title_olke_activity">OlkeActivity</string>
     <string name="olke">Ölkə</string>
     <string name="olke_adi"><b>OlkeAdi</b></string>
@@ -28,4 +28,11 @@
     <string name="tel_kodu">Telefon kodu</string>
     <string name="qiteler">qiteler</string>
     <string name="qite">Aid olduğu coğrafi bölgə</string>
+    <string name="app_haqqinda">APP HAQQINDA</string>
+    <string name="sbhapps_terefinden"><b>Sbhapps</b> tərəfindən yaradılıb</string>
+    <string name="app_melumatlar">App-da olan bütün məlumatlar 2016-cı ilə aiddir.</string>
+    <string name="versiya">1.0</string>
+    <string name="app_versiya"><b>App versiya</b></string>
+    <string name="e_mail"><b>E-mail</b></string>
+    <string name="email_unvan">sabuhiapps@gmail.com</string>
 </resources>

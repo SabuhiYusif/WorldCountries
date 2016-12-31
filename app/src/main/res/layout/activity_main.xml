@@ -7,12 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.sbhapps.sabuh.worldcountries.CountryPagerActivity"
+    tools:context="com.myfirstapp.sabuh.worldcountries.CountryPagerActivity"
     >
-
-
-
-
 
     <ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"

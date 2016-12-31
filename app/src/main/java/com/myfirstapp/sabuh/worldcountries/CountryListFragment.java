@@ -1,4 +1,4 @@
-package com.sbhapps.sabuh.worldcountries;
+package com.myfirstapp.sabuh.worldcountries;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,8 +11,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Filter;
@@ -96,11 +98,20 @@ public class CountryListFragment extends AppCompatActivity {
     private boolean onBackPressedDouble=false;
     @Override
     public void onBackPressed() {
+//        SearchView searchView = (SearchView) findViewById(R.id.menu_search);
+//        if (!searchView.isIconified()) {
+//            searchView.setIconified(true);
+//            searchView.clearFocus();
+//        }
         if(onBackPressedDouble) {
+
             super.onBackPressed();
         }
-        this.onBackPressedDouble=true;
-        Toast.makeText(this,"Çıxmaq üçün bir daha basın",Toast.LENGTH_SHORT).show();
+
+            this.onBackPressedDouble=true;
+            Toast.makeText(this,"Çıxmaq üçün bir daha basın",Toast.LENGTH_SHORT).show();
+
+
         new Handler().postDelayed(new Runnable() {
 
             @Override
@@ -115,23 +126,39 @@ public class CountryListFragment extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         MenuItem item = menu.findItem(R.id.menu_search);
-        SearchView searchView = (SearchView) item.getActionView();
+        final SearchView searchView = (SearchView) item.getActionView();
+        lv.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(searchView.getWindowToken(), 0);
+                return false;
+            }
+        });
+        searchView.setIconified(true);
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
+                searchView.clearFocus();
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
                 adapter.getFilter().filter(newText);
+
+
 //                Log.d("COUNT", " " + adapter.getCount());
 
                 return false;
             }
         });
         return true;
+
+
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -143,7 +170,8 @@ public class CountryListFragment extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
 
-            Toast.makeText(this,"Haqqinda Clikced",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(),HaqqindaActivity.class);
+            startActivity(intent);
             return true;
         }
 
@@ -151,6 +179,7 @@ public class CountryListFragment extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 
 
     private class Adapter extends BaseAdapter implements Filterable {
@@ -263,12 +292,10 @@ public class CountryListFragment extends AppCompatActivity {
 
                     ArrayList<Countries> filters =new ArrayList<>();
 
-                    for(int i = 0; i< filterList.size(); i++){
-                        if(filterList.get(i).getNameOlke().toLowerCase().startsWith((constraint.toString().toLowerCase()))){
+                    for(int n = 0; n< filterList.size(); n++){
+                        if(filterList.get(n).getNameOlke().toLowerCase().startsWith((constraint.toString().toLowerCase()))){
 //                            Countries c = new Countries(filterList.get(i).getNameOlke(),filterList.get(i).getPaytaxt(), filterList.get(i).getIconId());
-
-
-                            filters.add(filterList.get(i));
+                            filters.add(filterList.get(n));
 
                         }
 

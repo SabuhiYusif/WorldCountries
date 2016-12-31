@@ -1,4 +1,4 @@
-package com.sbhapps.sabuh.worldcountries;
+package com.myfirstapp.sabuh.worldcountries;
 
 import android.content.Context;
 
@@ -79,7 +79,8 @@ public class CountryLab {
         Countries efq = new Countries(R.drawable.afghanistan_256);
         Countries elc = new Countries(R.drawable.algeria256);
         Countries far = new Countries(R.drawable.faroe_islands_256);
-        Countries fel = new Countries(R.drawable.palestinian_territory_256);
+
+        Countries fic = new Countries(R.drawable.fiji_256);
         Countries fil = new Countries(R.drawable.cote_d_ivoire_256);
         Countries fin = new Countries(R.drawable.finland_256);
         Countries fra = new Countries(R.drawable.france_256);
@@ -92,11 +93,13 @@ public class CountryLab {
         Countries honk = new Countries(R.drawable.hong_kong_256);
         Countries xor = new Countries(R.drawable.croatia_256);
         Countries ind = new Countries(R.drawable.indonesia_256);
+        Countries ior = new Countries(R.drawable.jordan_256);
         Countries iraq = new Countries(R.drawable.iraq_256);
         Countries ira = new Countries(R.drawable.iran_256);
         Countries irl = new Countries(R.drawable.ireland_256);
         Countries isl = new Countries(R.drawable.iceland_256);
         Countries isp = new Countries(R.drawable.spain_256);
+        Countries isr = new Countries(R.drawable.israel_256);
         Countries isv = new Countries(R.drawable.sweden_256);
         Countries ita = new Countries(R.drawable.italy_256);
         Countries kamb = new Countries(R.drawable.cambodia_256);
@@ -374,7 +377,7 @@ public class CountryLab {
         aze.setImageId(R.drawable.azerbaijan_640);
         aze.setEhali("9 168 000");
         aze.setErazi("86 600 (Ərazi Reytinqi: 115)");
-        aze.setDil("Azerbaycanca");
+        aze.setDil("Azerbaycan");
         aze.setValyuta("Manat(AZN)");
         aze.setTelKod("+994");
         aze.setUDM("53.05 milyard");
@@ -852,6 +855,16 @@ public class CountryLab {
 //        fel.setTelKod("");
 //        fel.setUDM("2.45 milyard");
 //        fel.setQite("Avropa");
+        fic.setNameOlke("Fici ");
+        fic.setPaytaxt("Suva");
+        fic.setImageId(R.drawable.fiji_640);
+        fic.setEhali("881 065");
+        fic.setErazi("909 (Ərazi Reytinqi: 161)");
+        fic.setDil("İngilis");
+        fic.setValyuta("Fici Dolları");
+        fic.setTelKod("+679");
+        fic.setUDM("4.964 milyard");
+        fic.setQite("Avstraliya");
 
         fil.setNameOlke("Fildişi Sahili");
         fil.setPaytaxt("Yamosukro");
@@ -990,6 +1003,17 @@ public class CountryLab {
         ind.setUDM("861.93 milyard");
         ind.setQite("Asiya");
 
+        ior.setNameOlke("İordaniya ");
+        ior.setPaytaxt("Əmman");
+        ior.setImageId(R.drawable.jordan_640);
+        ior.setEhali("9 870 702");
+        ior.setErazi("89 341 (Ərazi Reytinqi: 100)");
+        ior.setDil("Ərəb");
+        ior.setValyuta("Dinar");
+        ior.setTelKod("+962");
+        ior.setUDM("38.210 milyard");
+        ior.setQite("Asiya");
+
         iraq.setNameOlke("İraq");
         iraq.setPaytaxt("Bağdad");
         iraq.setImageId(R.drawable.iraq_640);
@@ -1045,6 +1069,17 @@ public class CountryLab {
         isp.setTelKod("+34");
         isp.setUDM("1199.06 milyard");
         isp.setQite("Avropa");
+
+        isr.setNameOlke("İsrail");
+        isr.setPaytaxt("Yərusalem");
+        isr.setImageId(R.drawable.israel_640);
+        isr.setEhali("8 602 493");
+        isr.setErazi("22,072 (Ərazi Reytinqi: 149)");
+        isr.setDil("Yəhudi");
+        isr.setValyuta("İsrail Şekeli");
+        isr.setTelKod("+972");
+        isr.setUDM("296.08 milyard");
+        isr.setQite("Asiya");
 
         isv.setNameOlke("İsveç");
         isv.setPaytaxt("Stokholm");
@@ -2620,21 +2655,23 @@ public class CountryLab {
         mOlkeler.add(efq);
         mOlkeler.add(elc);
         mOlkeler.add(far);
-//        mOlkeler.add(fel);
+        mOlkeler.add(fic);
         mOlkeler.add(fil);
         mOlkeler.add(fin);
-          mOlkeler.add(fra);
+        mOlkeler.add(fra);
         mOlkeler.add(hai);
         mOlkeler.add(hin);
         mOlkeler.add(hond);
         mOlkeler.add(honk);
         mOlkeler.add(xor);
         mOlkeler.add(ind);
+        mOlkeler.add(ior);
         mOlkeler.add(iraq);
         mOlkeler.add(ira);
         mOlkeler.add(irl);
         mOlkeler.add(isl);
         mOlkeler.add(isp);
+        mOlkeler.add(isr);
         mOlkeler.add(isv);
         mOlkeler.add(ita);
         mOlkeler.add(kamb);

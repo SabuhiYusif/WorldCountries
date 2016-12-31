@@ -1,4 +1,4 @@
-package com.sbhapps.sabuh.worldcountries;
+package com.myfirstapp.sabuh.worldcountries;
 
 
 import android.graphics.Color;

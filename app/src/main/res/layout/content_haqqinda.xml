@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:id="@+id/appHaqqinda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_haqqinda"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                android:textStyle="bold"
+                />
+            <View
+                android:id="@+id/haqqindaView"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/appHaqqinda"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:id="@+id/sbhapps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sbhapps_terefinden"
+                android:layout_below="@id/haqqindaView"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+
+
+                />
+            <View
+                android:id="@+id/viewSabuhiApps"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@id/sbhapps"/>
+            <TextView
+                android:id="@+id/appVersiya"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_versiya"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/viewSabuhiApps"
+
+                />
+            <TextView
+                android:id="@+id/versiyaNo"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="@string/versiya"
+                 android:textSize="14sp"
+                 android:layout_marginBottom="5dp"
+                android:layout_below="@id/appVersiya"
+            />
+            <View
+                android:id="@+id/versiyaView"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@id/versiyaNo"/>
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/e_mail"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/versiyaView"
+
+                />
+            <TextView
+                android:id="@+id/email_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/email_unvan"
+                android:textSize="14sp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/email"
+                />
+            <View
+                android:id="@+id/emailView"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@id/email_text"/>
+            <TextView
+                android:id="@+id/appMelumat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_melumatlar"
+                android:textSize="16sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/emailView"
+                />
+            <View
+                android:id="@+id/melumatView"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@id/appMelumat"/>
+             </RelativeLayout>
+        </ScrollView>
+
+
+
+</LinearLayout>
